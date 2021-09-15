@@ -1,0 +1,14 @@
+{
+    "name": "specbee/storm",
+    "description": "A base profile for Drupal 9 with rich features for faster development and head start.",
+    "type": "drupal-profile",
+    "license": "MIT",
+    "require": {
+        "drupal/core": "^9.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Specbee\\Storm\\": "src/"
+        }
+    }
+}
