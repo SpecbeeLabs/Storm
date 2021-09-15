@@ -1,4 +1,4 @@
-name: Storm
+name: "Storm"
 type: profile
 description: "A base profile for Drupal 9 with rich features for faster development and head start."
 version: VERSION
@@ -10,7 +10,4 @@ install: []
 themes:
   - olivero
   - claro
-distribution:
-  name: "Storm profile"
-project: "storm"
-core_incompatible: false
+
