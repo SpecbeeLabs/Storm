@@ -1,0 +1,4 @@
+name: Storm
+type: profile
+description: "A base profile for Drupal 9 with rich features for faster development and head start."
+core_version_requirement: "^8.8 || ^9"
