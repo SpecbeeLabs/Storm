@@ -4,11 +4,31 @@
     "type": "drupal-profile",
     "license": "MIT",
     "require": {
-        "drupal/core": "^9.2"
+        "drupal/core": "^9.2",
+        "drupal/admin_toolbar": "^3.0",
+        "drupal/linkit": "^6.0@beta",
+        "drupal/pathauto": "^1.8",
+        "drupal/redirect": "^1.6",
+        "drupal/simple_sitemap": "^3.10",
+        "drupal/twig_tweak": "^3.1",
+        "drupal/twig_field_value": "^2.0",
+        "drupal/metatag": "^1.16"
     },
     "autoload": {
         "psr-4": {
             "Specbee\\Storm\\": "src/"
         }
-    }
+    },
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "assets": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

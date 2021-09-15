@@ -1,32 +1,16 @@
 name: Storm
 type: profile
 description: "A base profile for Drupal 9 with rich features for faster development and head start."
+version: VERSION
 core_version_requirement: "^8.8 || ^9"
-install:
-  - block_content
-  - breakpoint
-  - ckeditor
-  - config
-  - contextual
-  - menu_link_content
-  - datetime
-  - editor
-  - help
-  - history
-  - menu_ui
-  - node
-  - options
-  - path
-  - taxonomy
-  - text
-  - dblog
-  - shortcut
-  - toolbar
-  - field_ui
-  - file
-  - rdf
-  - views
-  - views_ui
+package: Storm
+dependencies:
+  - storm:storm_core
+install: []
 themes:
   - olivero
   - claro
+distribution:
+  name: "Storm profile"
+project: "storm"
+core_incompatible: false
