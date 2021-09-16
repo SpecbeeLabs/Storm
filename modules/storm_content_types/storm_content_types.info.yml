@@ -1,0 +1,8 @@
+name: Storm content type
+type: module
+description: "Provides basic content types with Storm."
+version: VERSION
+core_version_requirement: ^8.8 || ^9
+package: Storm
+dependencies:
+  - storm:storm_core

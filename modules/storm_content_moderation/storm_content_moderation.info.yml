@@ -1,0 +1,8 @@
+name: Storm content moderation
+type: module
+description: "Provides workflow and content moderation states for editorial actions."
+version: VERSION
+core_version_requirement: ^8.8 || ^9
+package: Storm
+dependencies:
+  - storm:storm_core

@@ -1,0 +1,8 @@
+name: Storm security
+type: module
+description: "Provides security enhancements."
+version: VERSION
+core_version_requirement: ^8.8 || ^9
+package: Storm
+dependencies:
+  - storm:storm_core

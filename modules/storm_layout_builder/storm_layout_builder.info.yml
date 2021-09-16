@@ -1,0 +1,8 @@
+name: Storm layout builder
+type: module
+description: "Enhances the Drupal Layout Builder."
+version: VERSION
+core_version_requirement: ^8.8 || ^9
+package: Storm
+dependencies:
+  - storm:storm_core
