@@ -12,7 +12,8 @@
         "drupal/simple_sitemap": "^3.10",
         "drupal/twig_tweak": "^3.1",
         "drupal/twig_field_value": "^2.0",
-        "drupal/metatag": "^1.16"
+        "drupal/metatag": "^1.16",
+        "drupal/entity_embed": "^1.2"
     },
     "autoload": {
         "psr-4": {

@@ -45,6 +45,7 @@ dependencies:
   # Contrib
   - admin_toolbar:admin_toolbar
   - admin_toolbar:admin_toolbar_tools
+  - entity_embed:entity_embed
   - linkit:linkit
   - twig_tweak:twig_tweak
   - twig_field_value:twig_field_value
