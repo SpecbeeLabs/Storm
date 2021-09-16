@@ -3,21 +3,15 @@ status: true
 dependencies:
   config:
     - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_tags
     - media.type.remote_video
   module:
     - media
-    - path
 id: media.remote_video.default
 targetEntityType: media
 bundle: remote_video
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_media_oembed_video:
     type: oembed_textfield
     weight: 0
@@ -26,28 +20,25 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-  path:
-    type: path
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  status:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 100
-    region: content
-    third_party_settings: {  }
-  uid:
+  field_tags:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 1
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 2
     region: content
     third_party_settings: {  }
 hidden:
+  created: true
   name: true
+  path: true
+  uid: true
