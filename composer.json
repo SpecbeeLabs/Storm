@@ -13,7 +13,9 @@
         "drupal/twig_tweak": "^3.1",
         "drupal/twig_field_value": "^2.0",
         "drupal/metatag": "^1.16",
-        "drupal/entity_embed": "^1.2"
+        "drupal/entity_embed": "^1.2",
+        "drupal/moderation_sidebar": "^1.4",
+        "drupal/moderation_dashboard": "^1.0@beta"
     },
     "autoload": {
         "psr-4": {
