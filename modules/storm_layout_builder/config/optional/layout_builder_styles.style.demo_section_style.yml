@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+id: demo_section_style
+label: 'Demo section style'
+classes: .demo-section
+type: section
+weight: 0
+block_restrictions: {  }
+layout_restrictions:
+  - layout_onecol
+  - layout_twocol_section
+  - layout_threecol_section

@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: demo_block_class
+label: 'Demo block class'
+classes: .demo-block-class
+type: component
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }

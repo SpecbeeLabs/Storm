@@ -48,9 +48,8 @@ dependencies:
   - admin_toolbar:admin_toolbar
   - admin_toolbar:admin_toolbar_tools
   - entity_embed:entity_embed
+  - field_group:field_group
   - linkit:linkit
   - moderation_sidebar:moderation_sidebar
   - twig_tweak:twig_tweak
   - twig_field_value:twig_field_value
-install:
-  - moderation_dashboard:moderation_dashboard

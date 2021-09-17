@@ -7,7 +7,8 @@ package: Storm
 dependencies:
   - storm:storm_core
   - gin:gin_toolbar
-install: []
+install:
+  - storm_layout_builder
 themes:
   - olivero
   - claro
