@@ -6,8 +6,10 @@ core_version_requirement: "^8.8 || ^9"
 package: Storm
 dependencies:
   - storm:storm_core
+  - gin:gin_toolbar
 install: []
 themes:
   - olivero
   - claro
+  - gin
 

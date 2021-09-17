@@ -27,7 +27,7 @@ function storm_set_default_theme() {
   Drupal::configFactory()
     ->getEditable('system.theme')
     ->set('default', 'olivero')
-    ->set('admin', 'claro')
+    ->set('admin', 'gin')
     ->save(TRUE);
 
   // Use the admin theme for creating content.

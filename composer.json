@@ -15,7 +15,8 @@
         "drupal/metatag": "^1.16",
         "drupal/entity_embed": "^1.2",
         "drupal/moderation_sidebar": "^1.4",
-        "drupal/moderation_dashboard": "^1.0@beta"
+        "drupal/moderation_dashboard": "^1.0@beta",
+        "drupal/gin": "^3.0@alpha"
     },
     "autoload": {
         "psr-4": {
