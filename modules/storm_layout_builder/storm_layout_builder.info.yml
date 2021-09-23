@@ -5,7 +5,6 @@ version: VERSION
 core_version_requirement: ^8.8 || ^9
 package: Storm
 dependencies:
-  - storm:storm_core
   - drupal:layout_builder
   - drupal:layout_discovery
   - layout_builder_modal:layout_builder_modal

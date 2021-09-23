@@ -4,13 +4,64 @@ description: "A base profile for Drupal 9 with rich features for faster developm
 version: VERSION
 core_version_requirement: "^8.8 || ^9"
 package: Storm
-dependencies:
-  - storm:storm_core
-  - gin:gin_toolbar
 install:
+  # Core
+  - automated_cron
+  - block
+  - block_content
+  - breakpoint
+  - ckeditor
+  - config
+  - content_moderation
+  - contextual
+  - datetime
+  - dblog
+  - dynamic_page_cache
+  - editor
+  - field
+  - field_ui
+  - file
+  - filter
+  - help
+  - history
+  - image
+  - link
+  - media
+  - media_library
+  - menu_link_content
+  - menu_ui
+  - node
+  - options
+  - page_cache
+  - path
+  - rdf
+  - shortcut
+  - system
+  - taxonomy
+  - text
+  - toolbar
+  - drupal:user
+  - drupal:views
+  - drupal:views_ui
+  - drupal:workflows
+  # Contrib
+  - admin_toolbar:admin_toolbar
+  - admin_toolbar:admin_toolbar_tools
+  - entity_embed:entity_embed
+  - field_group:field_group
+  - gin_toolbar
+  - linkit:linkit
+  - moderation_sidebar:moderation_sidebar
+  - twig_tweak:twig_tweak
+  - twig_field_value:twig_field_value
+  # Storm
   - storm_layout_builder
 themes:
   - olivero
   - claro
   - gin
 
+distribution:
+  name: "Storm"
+project: "storm"
+core_incompatible: false
