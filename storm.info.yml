@@ -26,8 +26,6 @@ install:
   - history
   - image
   - link
-  - media
-  - media_library
   - menu_link_content
   - menu_ui
   - node
@@ -40,25 +38,31 @@ install:
   - taxonomy
   - text
   - toolbar
-  - drupal:user
-  - drupal:views
-  - drupal:views_ui
-  - drupal:workflows
+  - user
+  - views
+  - views_ui
+  - workflows
   # Contrib
-  - admin_toolbar:admin_toolbar
-  - admin_toolbar:admin_toolbar_tools
-  - entity_embed:entity_embed
-  - field_group:field_group
+  - admin_toolbar
+  - admin_toolbar_tools
+  - auto_entitylabel
+  - entity_embed
+  - field_group
   - gin_toolbar
-  - linkit:linkit
+  - linkit
   - moderation_sidebar:moderation_sidebar
-  - twig_tweak:twig_tweak
-  - twig_field_value:twig_field_value
+  - token
+  - twig_tweak
+  - twig_field_value
   # Storm
+  - storm_media
   - storm_layout_builder
+  - storm_blocks
+  - storm_text
+  - storm_card
+  - storm_view
 themes:
   - olivero
-  - claro
   - gin
 
 distribution:
