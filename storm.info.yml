@@ -61,6 +61,8 @@ install:
   - storm_text
   - storm_card
   - storm_view
+  - storm_content_types
+  - storm_article
 themes:
   - olivero
   - gin

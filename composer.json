@@ -26,7 +26,8 @@
         "drupal/field_group": "^3.2",
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/inline_block_title_automatic": "^1.0",
-        "drupal/viewsreference": "^1.7"
+        "drupal/viewsreference": "^1.7",
+        "drupal/autocomplete_deluxe": "^2.0"
     },
     "autoload": {
         "psr-4": {

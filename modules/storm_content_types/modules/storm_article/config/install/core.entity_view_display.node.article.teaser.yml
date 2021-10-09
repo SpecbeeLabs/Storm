@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article.body
+    - field.field.node.article.field_category
+    - field.field.node.article.field_featured_image
+    - field.field.node.article.field_footer_text
+    - field.field.node.article.field_references
+    - field.field.node.article.field_shoulder_text
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_teaser_text
+    - field.field.node.article.field_thumbnail
+    - field.field.node.article.field_video
+    - node.type.article
+  module:
+    - text
+    - user
+id: node.article.teaser
+targetEntityType: node
+bundle: article
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_category: true
+  field_featured_image: true
+  field_footer_text: true
+  field_references: true
+  field_shoulder_text: true
+  field_tags: true
+  field_teaser_text: true
+  field_thumbnail: true
+  field_video: true
