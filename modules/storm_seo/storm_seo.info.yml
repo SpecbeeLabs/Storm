@@ -8,6 +8,10 @@ dependencies:
   - google_analytics:google_analytics
   - linkchecker:linkchecker
   - metatag:metatag
+  - metatag:metatag_facebook
+  - metatag:metatag_open_graph
+  - metatag:metatag_twitter_cards
+  - metatag:metatag_views
   - pathauto:pathauto
   - seo_checklist:seo_checklist
   - xmlsitemap:xmlsitemap
