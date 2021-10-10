@@ -63,6 +63,7 @@ install:
   - storm_view
   - storm_content_types
   - storm_article
+  - storm_page
 themes:
   - olivero
   - gin

@@ -1,0 +1,11 @@
+name: 'Basic Page'
+description: 'Provides Basic Page content type and related configuration. Use <em>basic pages</em> for your static content, such as a ''''Privacy Policy'''' page.'
+type: module
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - field
+  - menu_ui
+  - node
+  - path
+  - text
+  - user
