@@ -27,7 +27,12 @@
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/inline_block_title_automatic": "^1.0",
         "drupal/viewsreference": "^1.7",
-        "drupal/autocomplete_deluxe": "^2.0"
+        "drupal/autocomplete_deluxe": "^2.0",
+        "drupal/xmlsitemap": "^1.1",
+        "drupal/yoast_seo": "^1.7",
+        "drupal/seo_checklist": "^5.1",
+        "drupal/google_analytics": "^3.1",
+        "drupal/linkchecker": "^1.0@beta"
     },
     "autoload": {
         "psr-4": {
