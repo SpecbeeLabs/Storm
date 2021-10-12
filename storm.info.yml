@@ -65,6 +65,7 @@ install:
   - storm_article
   - storm_page
   - storm_seo
+  - storm_search
 themes:
   - olivero
   - gin

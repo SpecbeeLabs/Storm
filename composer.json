@@ -32,7 +32,10 @@
         "drupal/yoast_seo": "^1.7",
         "drupal/seo_checklist": "^5.1",
         "drupal/google_analytics": "^3.1",
-        "drupal/linkchecker": "^1.0@beta"
+        "drupal/linkchecker": "^1.0@beta",
+        "drupal/search_api": "^1.20",
+        "drupal/elasticsearch_connector": "^7.0@alpha",
+        "drupal/facets": "^1.8"
     },
     "autoload": {
         "psr-4": {
