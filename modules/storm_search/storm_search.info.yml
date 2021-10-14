@@ -6,5 +6,7 @@ core_version_requirement: ^8.8 || ^9
 package: Storm
 dependencies:
   - search_api:search_api
+  - search_api:search_api_db
   - elasticsearch_connector:elasticsearch_connector
+  - elasticsearch_connector:elasticsearch_connector_views
   - facets:facets
