@@ -42,7 +42,8 @@
         "drupal/webp": "^1.0@beta",
         "drupal/xmlsitemap": "^1.2",
         "drupal/yoast_seo": "^1.7",
-        "drupal/filefield_paths": "^1.0@beta"
+        "drupal/filefield_paths": "^1.0@beta",
+        "drupal/robotstxt": "^1.4"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23"

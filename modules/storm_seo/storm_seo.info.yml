@@ -13,6 +13,7 @@ dependencies:
   - metatag:metatag_twitter_cards
   - metatag:metatag_views
   - pathauto:pathauto
+  - robotstxt:robotstxt
   - seo_checklist:seo_checklist
   - xmlsitemap:xmlsitemap
   - yoast_seo:yoast_seo
