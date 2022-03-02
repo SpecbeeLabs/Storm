@@ -5,4 +5,8 @@ version: VERSION
 core_version_requirement: ^8.8 || ^9
 package: Storm
 dependencies:
-  - storm:storm_core
+  - password_policy:password_policy
+  - username_enumeration_prevention:username_enumeration_prevention
+  - flood_control:flood_control
+  - seckit:seckit
+  - recaptcha:recaptcha

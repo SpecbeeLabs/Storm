@@ -64,8 +64,9 @@ install:
   - storm_content_types
   - storm_article
   - storm_page
-  - storm_seo
   - storm_search
+  - storm_security
+  - storm_seo
 themes:
   - olivero
   - gin
