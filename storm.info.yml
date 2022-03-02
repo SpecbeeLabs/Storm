@@ -48,6 +48,7 @@ install:
   - auto_entitylabel
   - entity_embed
   - field_group
+  - filefield_paths
   - gin_toolbar
   - linkit
   - moderation_sidebar
