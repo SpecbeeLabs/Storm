@@ -4,6 +4,8 @@
     "license": "MIT",
     "type": "drupal-profile",
     "require": {
+        "bower-asset/lazysizes": "^5.3",
+        "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.1",
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/autocomplete_deluxe": "^2.0",
@@ -12,6 +14,7 @@
         "drupal/entity_embed": "^1.2",
         "drupal/facets": "^2.0",
         "drupal/field_group": "^3.2",
+        "drupal/filefield_paths": "^1.0@beta",
         "drupal/flood_control": "^2.2",
         "drupal/gin": "^3.0@alpha",
         "drupal/gin_lb": "^1.0@beta",
@@ -22,6 +25,7 @@
         "drupal/layout_builder_restrictions": "^2.12",
         "drupal/layout_builder_styles": "^1.0@beta",
         "drupal/layout_library": "^1.0@beta",
+        "drupal/lazy": "^3.11",
         "drupal/linkchecker": "^1.0@beta",
         "drupal/linkit": "^6.0@beta",
         "drupal/metatag": "^1.19",
@@ -31,6 +35,7 @@
         "drupal/pathauto": "^1.9",
         "drupal/recaptcha": "^3.0",
         "drupal/redirect": "^1.7",
+        "drupal/robotstxt": "^1.4",
         "drupal/search_api": "^1.23",
         "drupal/seckit": "^2.0",
         "drupal/seo_checklist": "^5.1",
@@ -41,9 +46,7 @@
         "drupal/viewsreference": "^1.7",
         "drupal/webp": "^1.0@beta",
         "drupal/xmlsitemap": "^1.2",
-        "drupal/yoast_seo": "^1.7",
-        "drupal/filefield_paths": "^1.0@beta",
-        "drupal/robotstxt": "^1.4"
+        "drupal/yoast_seo": "^1.7"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23"
@@ -63,6 +66,59 @@
     "autoload": {
         "psr-4": {
             "Specbee\\Storm\\": "src/"
+        }
+    },
+    "extra": {
+        "composer-exit-on-patch-failure": "true",
+        "drupal-scaffold": {
+            "file-mapping": {
+                "[project-root]/.editorconfig": false,
+                "[project-root]/.gitattributes": false,
+                "[web-root]/.csslintrc": false,
+                "[web-root]/INSTALL.txt": false,
+                "[web-root]/example.gitignore": false,
+                "[web-root]/modules/README.txt": false,
+                "[web-root]/profiles/README.txt": false,
+                "[web-root]/robots.txt": false,
+                "[web-root]/sites/README.txt": false,
+                "[web-root]/themes/README.txt": false,
+                "[web-root]/web.config": false
+            },
+            "locations": {
+                "web-root": "docroot/"
+            }
+        },
+        "enable-patching": true,
+        "installer-paths": {
+            "docroot/core": [
+                "type:drupal-core"
+            ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ]
+        },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/core": {
+                "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch"
+            }
         }
     }
 }
