@@ -7,6 +7,7 @@ package: Storm
 install:
   # Core
   - drupal:automated_cron
+  - drupal:big_pipe
   - drupal:block
   - drupal:block_content
   - drupal:breakpoint
@@ -25,6 +26,7 @@ install:
   - drupal:help
   - drupal:history
   - drupal:image
+  - drupal:inline_form_errors
   - drupal:link
   - drupal:menu_link_content
   - drupal:menu_ui
@@ -50,6 +52,7 @@ install:
   - field_group:field_group
   - filefield_paths:filefield_paths
   - gin_toolbar:gin_toolbar
+  - link_attributes:link_attributes
   - linkit:linkit
   - moderation_sidebar:moderation_sidebar
   - token:token
