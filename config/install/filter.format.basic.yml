@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - lazy
     - linkit
     - media
 name: Basic
@@ -43,6 +44,14 @@ filters:
     weight: 100
     settings:
       default_view_mode: default
+      allowed_view_modes: {  }
       allowed_media_types:
         image: image
-      allowed_view_modes: {  }
+  lazy_filter:
+    id: lazy_filter
+    provider: lazy
+    status: true
+    weight: 20
+    settings:
+      image: true
+      iframe: true

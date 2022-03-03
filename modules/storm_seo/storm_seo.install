@@ -5,7 +5,7 @@
  * Install and update hooks for storm_seo.
  */
 
-use Symfony\Component\Yaml\Yaml;
+use Specbee\Storm\StormConfigOverwrite;
 
 /**
  * Implements hook_install().
@@ -14,12 +14,5 @@ function storm_seo_install() {
   // Prepare the new config path.
   $config_path = drupal_get_path('module', 'storm_seo') . '/config/overwrite/linkchecker.settings.yml';
 
-  // Parse the yaml and get data from config file.
-  $config_yaml = Yaml::parse(file_get_contents($config_path));
-
-  // Add new config using config factory.
-  \Drupal::configFactory()
-    ->getEditable('linkchecker.settings')
-    ->setData($config_yaml)
-    ->save();
+  StormConfigOverwrite::alter($config_path, 'linkchecker.settings');
 }

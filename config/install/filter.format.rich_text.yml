@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.full
   module:
     - entity_embed
     - linkit
@@ -15,7 +17,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <a href hreflang class data-entity-substitution data-entity-type data-entity-uuid title > <p class> <h1> <pre> <s> <sup> <sub> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <img src alt title data-entity-type data-entity-uuid data-align data-caption> <hr> <u> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title>'
+      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <h1> <pre> <s> <sup> <sub> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <img src alt title data-entity-type data-entity-uuid data-align data-caption> <hr> <u> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <p class=" lead small"> <a href hreflang data-entity-substitution data-entity-type data-entity-uuid title class=" button"> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button alt title data-langcode>'
       filter_html_help: true
       filter_html_nofollow: false
   linkit:
@@ -51,9 +53,10 @@ filters:
     weight: 100
     settings:
       default_view_mode: default
+      allowed_view_modes:
+        default: default
       allowed_media_types:
         image: image
-      allowed_view_modes: {  }
   entity_embed:
     id: entity_embed
     provider: entity_embed
