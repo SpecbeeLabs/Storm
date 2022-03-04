@@ -1,4 +1,4 @@
-name: Storm blocks - Card
+name: Storm blocks - View
 type: module
 description: Provides a block type to reference view listing.
 package: Storm

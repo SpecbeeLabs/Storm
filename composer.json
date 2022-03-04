@@ -120,6 +120,9 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/autocomplete_deluxe": {
+                "3226741 - Support Claro sub-themes": "https://www.drupal.org/files/issues/2021-08-28/3226741-3.patch"
+            },
             "drupal/core": {
                 "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch"
             }
