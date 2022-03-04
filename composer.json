@@ -125,6 +125,9 @@
             },
             "drupal/core": {
                 "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch"
+            },
+            "drupal/elasticsearch_connector": {
+                "2850749 - Cannot load the Elasticsearch cluster for your index": "https://www.drupal.org/files/issues/2021-12-01/cannot-load-cluster-exception-2850749-10.patch"
             }
         }
     }
