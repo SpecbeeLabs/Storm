@@ -5,6 +5,6 @@ id: list_views
 block_id: 'inline_block:list_views'
 category: content
 label: 'List - Views'
-weight: 1
 image_path: ''
 image_alt: ''
+weight: 1

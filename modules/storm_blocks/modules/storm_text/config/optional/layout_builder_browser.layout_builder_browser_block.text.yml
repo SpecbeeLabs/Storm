@@ -5,6 +5,6 @@ id: text
 block_id: 'inline_block:text'
 category: content
 label: Text
-weight: -100
 image_path: ''
 image_alt: ''
+weight: -100

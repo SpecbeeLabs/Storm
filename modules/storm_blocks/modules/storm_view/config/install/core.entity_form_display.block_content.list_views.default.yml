@@ -17,30 +17,30 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 1
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   field_title:
+    type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_view:
+    type: viewsreference_autocomplete
     weight: 2
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: viewsreference_autocomplete
-    region: content
 hidden:
   info: true

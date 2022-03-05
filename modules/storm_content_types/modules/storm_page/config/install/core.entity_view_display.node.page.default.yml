@@ -16,8 +16,11 @@ content:
     label: hidden
     type: text_default
     weight: 101
-    settings: {  }
-    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    settings: { }
+    third_party_settings: { }
+    weight: -20
     region: content
   links:
     weight: 100

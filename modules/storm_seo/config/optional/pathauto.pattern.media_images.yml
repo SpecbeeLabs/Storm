@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - ctools
     - media
 id: media_images
 label: 'Media - Images'
@@ -11,12 +10,12 @@ pattern: '/media/image/[media:name]'
 selection_criteria:
   51dd3020-0f1b-4a45-b439-8f6d22609fcf:
     id: 'entity_bundle:media'
-    bundles:
-      image: image
     negate: false
+    uuid: 51dd3020-0f1b-4a45-b439-8f6d22609fcf
     context_mapping:
       media: media
-    uuid: 51dd3020-0f1b-4a45-b439-8f6d22609fcf
+    bundles:
+      image: image
 selection_logic: and
 weight: -5
 relationships: {  }
