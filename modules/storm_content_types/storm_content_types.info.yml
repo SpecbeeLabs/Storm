@@ -10,5 +10,7 @@ dependencies:
   - drupal:node
   - drupal:taxonomy
   - field_group:field_group
+  - metatag:metatag
+  - yoast_seo:yoast_seo
 
-  
+
