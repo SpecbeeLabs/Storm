@@ -47,10 +47,10 @@
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^3.1",
         "drupal/username_enumeration_prevention": "^1.2",
-        "drupal/viewsreference": "^1.7",
+        "drupal/viewsreference": "^2.0@beta",
         "drupal/webp": "^1.0@beta",
         "drupal/xmlsitemap": "^1.2",
-        "drupal/yoast_seo": "^1.7"
+        "drupal/yoast_seo": "^2.0@alpha"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23"
@@ -120,9 +120,6 @@
             "drupal/core": "-p2"
         },
         "patches": {
-            "drupal/autocomplete_deluxe": {
-                "3226741 - Support Claro sub-themes": "https://www.drupal.org/files/issues/2021-08-28/3226741-3.patch"
-            },
             "drupal/core": {
                 "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch"
             },
