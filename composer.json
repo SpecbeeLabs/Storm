@@ -127,5 +127,11 @@
                 "2850749 - Cannot load the Elasticsearch cluster for your index": "https://www.drupal.org/files/issues/2021-12-01/cannot-load-cluster-exception-2850749-10.patch"
             }
         }
+    },
+    "config": {
+        "allow-plugins": {
+            "cweagans/composer-patches": true,
+            "ergebnis/composer-normalize": true
+        }
     }
 }
