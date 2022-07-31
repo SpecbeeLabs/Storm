@@ -10,7 +10,7 @@
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/autocomplete_deluxe": "^2.0",
         "drupal/backup_migrate": "^5.0",
-        "drupal/core": "^9.3",
+        "drupal/core": "^9.4",
         "drupal/devel": "^4.1",
         "drupal/devel_kint_extras": "^1.0",
         "drupal/elasticsearch_connector": "^7.0@alpha",
