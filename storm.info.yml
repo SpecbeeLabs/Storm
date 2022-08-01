@@ -53,6 +53,7 @@ install:
   - filefield_paths:filefield_paths
   - gin_toolbar:gin_toolbar
   - link_attributes:link_attributes
+  - linked_field:linked_field
   - linkit:linkit
   - moderation_sidebar:moderation_sidebar
   - token:token

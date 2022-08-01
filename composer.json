@@ -50,7 +50,8 @@
         "drupal/viewsreference": "^2.0@beta",
         "drupal/webp": "^1.0@beta",
         "drupal/xmlsitemap": "^1.2",
-        "drupal/yoast_seo": "^2.0@alpha"
+        "drupal/yoast_seo": "^2.0@alpha",
+        "drupal/linked_field": "^1.3"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23"
