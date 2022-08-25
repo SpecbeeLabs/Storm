@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "660a00ee33ed4215d76bd5daa92f7da6",
+    "content-hash": "135edd4bf820fb6f13593745efe6b90e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1926,6 +1926,10 @@
             ],
             "authors": [
                 {
+                    "name": "cs_shadow",
+                    "homepage": "https://www.drupal.org/user/2828287"
+                },
+                {
                     "name": "Dave Reid",
                     "homepage": "https://www.drupal.org/user/53892"
                 },
@@ -1936,10 +1940,6 @@
                 {
                     "name": "Drupal Media Team",
                     "homepage": "https://www.drupal.org/user/3260690"
-                },
-                {
-                    "name": "cs_shadow",
-                    "homepage": "https://www.drupal.org/user/2828287"
                 },
                 {
                     "name": "phenaproxima",
@@ -2260,12 +2260,12 @@
             ],
             "authors": [
                 {
-                    "name": "Dave Reid",
-                    "homepage": "https://www.drupal.org/user/53892"
-                },
-                {
                     "name": "batigolix",
                     "homepage": "https://www.drupal.org/user/22175"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
                 },
                 {
                     "name": "fabianderijk",
@@ -3043,7 +3043,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.0-beta5",
-                    "datestamp": "1656948129",
+                    "datestamp": "1659462336",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -3056,16 +3056,16 @@
             ],
             "authors": [
                 {
-                    "name": "Jeff Cardwell",
-                    "homepage": "https://www.drupal.org/user/2913129"
-                },
-                {
                     "name": "bkosborne",
                     "homepage": "https://www.drupal.org/user/788032"
                 },
                 {
                     "name": "gravelpot",
                     "homepage": "https://www.drupal.org/user/748208"
+                },
+                {
+                    "name": "Jeff Cardwell",
+                    "homepage": "https://www.drupal.org/user/2913129"
                 },
                 {
                     "name": "mark_fullmer",
@@ -3623,8 +3623,8 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "dsnopek",
-                    "homepage": "https://www.drupal.org/user/266527"
+                    "name": "EclipseGc",
+                    "homepage": "https://www.drupal.org/user/61203"
                 },
                 {
                     "name": "japerry",
@@ -3637,10 +3637,6 @@
                 {
                     "name": "phenaproxima",
                     "homepage": "https://www.drupal.org/user/205645"
-                },
-                {
-                    "name": "tim.plunkett",
-                    "homepage": "https://www.drupal.org/user/241634"
                 }
             ],
             "description": "Provides a way to place blocks on a custom page.",
@@ -6829,7 +6825,7 @@
                 "shasum": ""
             },
             "require": {
-                "elasticsearch/elasticsearch": "^7.1.1",
+                "elasticsearch/elasticsearch": "^7.10",
                 "ext-json": "*",
                 "nyholm/dsn": "^2.0.0",
                 "php": "^7.2 || ^8.0",
