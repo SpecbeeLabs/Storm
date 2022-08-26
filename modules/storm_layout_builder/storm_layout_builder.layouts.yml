@@ -17,7 +17,7 @@ storm_layout_twocol_section:
   path: layouts/twocol_section
   template: layout--twocol-section
   library: storm_layout_builder/twocol_section
-  class: '\Drupal\storm_layout_builder\Plugin\Layout\StormLayout'
+  class: '\Drupal\storm_layout_builder\Plugin\Layout\StormTwoColLayout'
   category: 'Columns: 2'
   default_region: first
   icon_map:
@@ -33,7 +33,7 @@ storm_layout_threecol_section:
   path: layouts/threecol_section
   template: layout--threecol-section
   library: storm_layout_builder/threecol_section
-  class: '\Drupal\storm_layout_builder\Plugin\Layout\StormLayout'
+  class: '\Drupal\storm_layout_builder\Plugin\Layout\StormThreeColLayout'
   category: 'Columns: 3'
   default_region: second
   icon_map:

@@ -19,6 +19,7 @@ class StormLayout extends LayoutDefault {
       '#title' => $this->t('Section title'),
       '#description' => $this->t('Provide an optional title to the layout section'),
       '#default_value' => $this->configuration['section_title'],
+      '#weight' => 1,
     ];
 
     return parent::buildConfigurationForm($form, $form_state);
@@ -31,5 +32,4 @@ class StormLayout extends LayoutDefault {
     parent::submitConfigurationForm($form, $form_state);
     $this->configuration['section_title'] = $form_state->getValue('section_title');
   }
-
 }
