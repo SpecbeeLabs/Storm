@@ -1,0 +1,21 @@
+/**
+ * @file
+ * Base stylesheet for flex-box based grid of layout sections.
+ */
+
+.l-container,
+.c-title {
+  width: 100%;
+}
+
+.l-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 40em) {
+  .l-grid__item {
+    flex: 0 1 100%;
+  }
+}

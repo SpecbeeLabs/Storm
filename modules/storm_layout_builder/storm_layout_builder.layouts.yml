@@ -1,8 +1,8 @@
-layout_onecol:
+storm_layout_onecol:
   label: 'Storm One column'
   path: layouts/onecol_section
   template: layout--onecol
-  library: storm_layout_builder/onecol_section
+  library: storm_layout_builder/layout
   class: '\Drupal\storm_layout_builder\Plugin\Layout\StormLayout'
   category: 'Columns: 1'
   default_region: content
@@ -16,7 +16,7 @@ storm_layout_twocol_section:
   label: 'Storm Two column'
   path: layouts/twocol_section
   template: layout--twocol-section
-  library: storm_layout_builder/twocol_section
+  library: storm_layout_builder/layout.twocol
   class: '\Drupal\storm_layout_builder\Plugin\Layout\StormTwoColLayout'
   category: 'Columns: 2'
   default_region: first
@@ -32,7 +32,7 @@ storm_layout_threecol_section:
   label: 'Storm Three column'
   path: layouts/threecol_section
   template: layout--threecol-section
-  library: storm_layout_builder/threecol_section
+  library: storm_layout_builder/layout.threecol
   class: '\Drupal\storm_layout_builder\Plugin\Layout\StormThreeColLayout'
   category: 'Columns: 3'
   default_region: second
@@ -50,7 +50,7 @@ storm_layout_fourcol_section:
   label: 'Storm Four column'
   path: layouts/fourcol_section
   template: layout--fourcol-section
-  library: storm_layout_builder/fourcol_section
+  library: storm_layout_builder/layout.fourcol
   class: '\Drupal\storm_layout_builder\Plugin\Layout\StormLayout'
   category: 'Columns: 4'
   default_region: first

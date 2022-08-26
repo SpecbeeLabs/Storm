@@ -12,14 +12,14 @@
 #}
 {%
   set classes = [
-    'l-grid',
-    'l-grid--onecol',
+    'l-container',
+    'l-container--onecol',
   ]
 %}
 {% if content %}
   <div{{attributes.addClass(classes)}}>
     <h2 class='c-title'>{{ content['#settings']['section_title'] }}</h2>
-    <div {{ region_attributes.content.addClass('l-grid__item', 'l-grid__item--content') }}>
+    <div {{ region_attributes.content.addClass('l-grid', 'l-grid--content') }}>
       {{ content.content }}
     </div>
   </div>
