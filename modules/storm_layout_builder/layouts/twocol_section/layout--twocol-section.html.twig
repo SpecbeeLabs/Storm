@@ -10,20 +10,29 @@
  * @ingroup themeable
  */
 #}
+
+{%
+  set classes = [
+    'layout',
+    'layout--twocol-section',
+  ]
+%}
+
 {% if content %}
-  <div{{ attributes }}>
+  <div{{attributes.addClass(classes)}}>
+    <h2 class='layout__title'>{{ content['#settings']['section_title'] }}</h2>
+    <div class='layout__regions'>
+      {% if content.first %}
+        <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first') }}>
+          {{ content.first }}
+        </div>
+      {% endif %}
 
-    {% if content.first %}
-      <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first') }}>
-        {{ content.first }}
-      </div>
-    {% endif %}
-
-    {% if content.second %}
-      <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second') }}>
-        {{ content.second }}
-      </div>
-    {% endif %}
-
+      {% if content.second %}
+        <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second') }}>
+          {{ content.second }}
+        </div>
+      {% endif %}
+    </div>
   </div>
 {% endif %}

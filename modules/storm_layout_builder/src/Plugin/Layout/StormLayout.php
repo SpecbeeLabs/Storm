@@ -14,6 +14,13 @@ class StormLayout extends LayoutDefault {
    * {@inheritdoc}
    */
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
+    $form['section_title'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Section title'),
+      '#description' => $this->t('Provide an optional title to the layout section'),
+      '#default_value' => $this->configuration['section_title'],
+    ];
+
     return parent::buildConfigurationForm($form, $form_state);
   }
 
@@ -22,6 +29,7 @@ class StormLayout extends LayoutDefault {
    */
   public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
     parent::submitConfigurationForm($form, $form_state);
+    $this->configuration['section_title'] = $form_state->getValue('section_title');
   }
 
 }

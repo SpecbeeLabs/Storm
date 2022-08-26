@@ -17,7 +17,8 @@
   ]
 %}
 {% if content %}
-  <div{{ attributes.addClass(classes) }}>
+  <div{{attributes.addClass(classes)}}>
+    <h2 {{ attributes.addclass('layout__title') }}>{{ content['#settings']['section_title'] }}</h2>
     <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
       {{ content.content }}
     </div>
