@@ -27,6 +27,7 @@
         "drupal/layout_builder_modal": "^1.1",
         "drupal/layout_builder_restrictions": "^2.12",
         "drupal/layout_builder_styles": "^1.0@beta",
+        "drupal/layout_disable": "^1.7",
         "drupal/layout_library": "^1.0@beta",
         "drupal/lazy": "^3.11",
         "drupal/link_attributes": "^1.11",
