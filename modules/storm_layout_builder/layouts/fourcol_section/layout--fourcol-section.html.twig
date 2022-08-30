@@ -16,9 +16,17 @@
     'l-container--fourcol',
   ]
 %}
+
+{# Set the title variables #}
+{% set title = content['#settings']['heading'] %}
+{% set heading_style = content['#settings']['heading_style'] %}
+
 {% if content %}
   <div{{attributes.addClass(classes)}}>
-    <h2 class='c-title'>{{ content['#settings']['section_title'] }}</h2>
+    <{{heading_style}} class="c-title c-title--{{ content['#settings']['heading_alignment'] }}">
+      {{ title }}
+    </{{heading_style}}>
+
     <div class='l-grid'>
       {% if content.first %}
         <div {{ region_attributes.first.addClass('l-grid__item', 'l-grid__item--first') }}>
@@ -43,6 +51,7 @@
           {{ content.fourth }}
         </div>
       {% endif %}
+
     </div>
   </div>
 {% endif %}

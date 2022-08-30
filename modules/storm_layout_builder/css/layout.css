@@ -19,3 +19,15 @@
     flex: 0 1 100%;
   }
 }
+
+.c-title--text-align-center {
+  text-align: center;
+}
+
+.c-title--text-align-left {
+  text-align: left;
+}
+
+.c-title--text-align-right {
+  text-align: right;
+}
