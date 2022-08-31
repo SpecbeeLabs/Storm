@@ -13,5 +13,6 @@ dependencies:
   - layout_builder_modal:layout_builder_modal
   - layout_builder_restrictions:layout_builder_restrictions
   - layout_builder_styles:layout_builder_styles
+  - layout_disable:layout_disable
   - layout_library:layout_library
 
