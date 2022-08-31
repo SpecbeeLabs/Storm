@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Layout builder customizations by Storm.
+ */
+
+/**
+ * Implements hook_plugin_filter_TYPE__CONSUMER_alter().
+ */
+function storm_layout_builder_plugin_filter_layout__layout_builder_alter(array &$definitions, array $extra) {
+  unset($definitions['layout_onecol']);
+}
