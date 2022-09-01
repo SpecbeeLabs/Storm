@@ -117,16 +117,56 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
       '#weight' => 3,
     ];
 
-    // Using markup since Gin LB adds an ugly fieldset to radio wrappers.
-    $form['section_background']['markup'] = [
-      '#type' => 'markup',
-      '#markup' => '<p><strong>' . $this->t('Background color') . '</strong></p>',
-    ];
-
     $form['section_background']['color'] = [
       '#type' => 'radios',
       '#options' => $this->getColors(),
       '#default_value' => $this->configuration['background_color'] ?? 'slb-bg-none',
+    ];
+
+    $form['section_background']['media'] = [
+      '#type' => 'media_library',
+      '#allowed_bundles' => ['image'],
+      '#title' => $this->t('Background Image'),
+      '#default_value' => $this->configuration['background_media'] ?? NULL,
+      '#description' => $this->t('Upload or select a background image.'),
+    ];
+    $form['section_background']['position'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Background image position'),
+      '#options' => [
+        'left top' => $this->t('Left top'),
+        'left center' => $this->t('Left center'),
+        'left bottom' => $this->t('Left bottom'),
+        'center top' => $this->t('Center top'),
+        'center center' => $this->t('Center center'),
+        'center bottom' => $this->t('Center bottom'),
+        'right top' => $this->t('Right top'),
+        'right center' => $this->t('Right center'),
+        'right bottom' => $this->t('Right bottom'),
+      ],
+      '#default_value' => $this->configuration['background_media_position'] ?? 'center center',
+    ];
+
+    $form['section_background']['size'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Background image size'),
+      '#options' => [
+        'cover' => $this->t('Cover'),
+        'contain' => $this->t('Contain'),
+      ],
+      '#default_value' => $this->configuration['background_size'] ?? 'cover',
+    ];
+
+    $form['section_background']['repeat'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Background image repeat'),
+      '#options' => [
+        'repeat' => $this->t('Repeat'),
+        'no-repeat' => $this->t('No repeat'),
+        'repeat-x' => $this->t('Repeat X'),
+        'repeat-y' => $this->t('Repeat Y'),
+      ],
+      '#default_value' => $this->configuration['background_repeat'] ?? 'no-repeat',
     ];
 
     return parent::buildConfigurationForm($form, $form_state);
@@ -152,10 +192,12 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
    * Build the config values array from config object.
    */
   private function getConfigValues($config) {
-    $items = explode("\r\n", $config);
-    foreach ($items as $item) {
-      $config = explode("|", $item);
-      $options[$config[0]] = $config[1];
+    foreach (explode("\r\n", $config) as $color) {
+      $color = trim($color);
+      if (!empty($color)) {
+        [$class, $label] = explode('|', $color);
+        $options[$class] = $label;
+      }
     }
 
     return $options;
@@ -173,6 +215,10 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
 
     $background = $form_state->getValue('section_background');
     $this->configuration['background_color'] = $background['color'];
+    $this->configuration['background_media'] = $background['media'] ?? NULL;
+    $this->configuration['background_position'] = $background['position'];
+    $this->configuration['background_size'] = $background['size'];
+    $this->configuration['background_repeat'] = $background['repeat'];
   }
 
 }

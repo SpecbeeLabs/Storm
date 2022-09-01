@@ -48,7 +48,7 @@ class StormLayoutBuilderStyleSettingsForm extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->config('storm_layout_builder.settings')
-      ->set('background_colors', $form_state->getValue('background_colors'))
+      ->set('background_colors', trim($form_state->getValue('background_colors')))
       ->save();
     parent::submitForm($form, $form_state);
   }

@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Template\Attribute;
+use Drupal\file\Entity\File;
+use Drupal\media\Entity\Media;
 
 /**
  * Implements hook_plugin_filter_TYPE__CONSUMER_alter().
@@ -18,6 +20,27 @@ function storm_layout_builder_plugin_filter_layout__layout_builder_alter(array &
  * Implements hook_preprocess_layout().
  */
 function storm_layout_builder_preprocess_layout(&$variables) {
+  $media = $variables['settings']['background_media'] ?? NULL;
+  $position = $variables['settings']['background_position'] ?? NULL;
+  $size = $variables['settings']['background_size'] ?? NULL;
+  $repeat = $variables['settings']['background_repeat'] ?? NULL;
+
+  if ($media) {
+    $entity = Media::load($media);
+    if ($entity) {
+      $fid = $entity->getSource()->getSourceFieldValue($entity);
+      $file = File::load($fid);
+      $url = $file->createFileUrl();
+      $background_media = [
+        'background-image: url(' . $url . ');',
+        'background-position: ' . $position . ';',
+        'background-size: ' . $size . ';',
+        'background-repeat: ' . $repeat . ';',
+      ];
+
+    }
+  }
+
   switch ($variables['content']['#layout']->id()) {
     case 'storm_layout_onecol':
       $class = 'l-container--onecol';
@@ -42,5 +65,6 @@ function storm_layout_builder_preprocess_layout(&$variables) {
       $class,
       $variables['settings']['background_color'],
     ],
+    'style' => $background_media ?? NULL,
   ]);
 }
