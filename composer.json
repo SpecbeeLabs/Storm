@@ -52,7 +52,8 @@
         "drupal/viewsreference": "^2.0@beta",
         "drupal/webp": "^1.0@beta",
         "drupal/xmlsitemap": "^1.2",
-        "drupal/yoast_seo": "^2.0@alpha"
+        "drupal/yoast_seo": "^2.0@alpha",
+        "drupal/media_library_form_element": "^2.0"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23"
