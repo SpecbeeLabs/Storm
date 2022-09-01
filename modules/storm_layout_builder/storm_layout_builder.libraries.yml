@@ -28,3 +28,8 @@ layout.fourcol:
       css/layout-fourcol-section.css: {}
   dependencies:
     - storm_layout_builder/layout.base
+
+form:
+  css:
+    component:
+      css/storm-layout-builder-settings.css: {}

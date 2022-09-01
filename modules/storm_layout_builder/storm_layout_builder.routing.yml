@@ -1,0 +1,7 @@
+storm_layout_builder.style_settings:
+  path: '/admin/config/system/storm/layout-builder/styles'
+  defaults:
+    _title: 'Storm Layout builder Styles'
+    _form: 'Drupal\storm_layout_builder\Form\StormLayoutBuilderStyleSettingsForm'
+  requirements:
+    _permission: 'administer storm configuration'

@@ -31,3 +31,27 @@
 .c-title--text-align-right {
   text-align: right;
 }
+
+.slb-bg-red {
+  background-color: #eb4d4b !important;
+}
+
+.slb-bg-green {
+  background-color: #6ab04c !important;
+}
+
+.slb-bg-blue {
+  background-color: #4834d4 !important;
+}
+
+.slb-bg-yellow {
+  background-color: #f9ca24 !important;
+}
+
+.slb-bg-white {
+  background-color: #fff !important;
+}
+
+.slb-bg-black {
+  background-color: #000 !important;
+}
