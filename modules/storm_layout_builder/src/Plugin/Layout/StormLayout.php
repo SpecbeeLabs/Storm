@@ -144,7 +144,7 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
         'right center' => $this->t('Right center'),
         'right bottom' => $this->t('Right bottom'),
       ],
-      '#default_value' => $this->configuration['background_media_position'] ?? 'center center',
+      '#default_value' => $this->configuration['background_position'] ?? 'center center',
     ];
 
     $form['section_background']['size'] = [
