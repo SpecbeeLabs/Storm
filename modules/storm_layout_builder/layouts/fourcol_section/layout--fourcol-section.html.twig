@@ -10,25 +10,19 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
-    'l-container',
-    'l-container--fourcol',
-    content['#settings']['background_color']
-  ]
-%}
 
 {# Set the title variables #}
 {% set title = content['#settings']['heading'] %}
 {% set heading_style = content['#settings']['heading_style'] %}
 
-{% if content %}
-  <div{{attributes.addClass(classes)}}>
-    <{{heading_style}} class="c-title c-title--{{ content['#settings']['heading_alignment'] }}">
-      {{ title }}
-    </{{heading_style}}>
-
-    <div class='l-grid'>
+{% if content.first or content.second or content.third or content.fourth %}
+  <div{{layout_container.attributes}}>
+    {% if title %}
+      <{{heading_style}} class="c-title c-title--{{ content['#settings']['heading_alignment'] }}">
+        {{ title }}
+      </{{heading_style}}>
+    {% endif %}
+    <div class='l-grid l-grid--content'>
       {% if content.first %}
         <div {{ region_attributes.first.addClass('l-grid__item', 'l-grid__item--first') }}>
           {{ content.first }}

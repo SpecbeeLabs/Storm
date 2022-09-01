@@ -117,9 +117,14 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
       '#weight' => 3,
     ];
 
+    // Using markup since Gin LB adds an ugly fieldset to radio wrappers.
+    $form['section_background']['markup'] = [
+      '#type' => 'markup',
+      '#markup' => '<p><strong>' . $this->t('Background color') . '</strong></p>',
+    ];
+
     $form['section_background']['color'] = [
       '#type' => 'radios',
-      '#title' => $this->t('Color'),
       '#options' => $this->getColors(),
       '#default_value' => $this->configuration['background_color'] ?? 'slb-bg-none',
     ];

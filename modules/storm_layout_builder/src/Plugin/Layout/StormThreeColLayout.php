@@ -29,8 +29,12 @@ class StormThreeColLayout extends StormLayout {
    */
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $form['column_widths'] = [
-      '#type' => 'select',
+      '#type' => 'details',
       '#title' => $this->t('Column widths'),
+      '#weight' => 2,
+    ];
+    $form['column_widths']['options'] = [
+      '#type' => 'select',
       '#default_value' => $this->configuration['column_widths'],
       '#options' => $this->getWidthOptions(),
       '#description' => $this->t('Choose the column widths for this layout.'),
@@ -64,7 +68,7 @@ class StormThreeColLayout extends StormLayout {
     $build = parent::build($regions);
     $build['#attributes']['class'] = [
       'l-grid',
-      'l-grid--' . $this->configuration['column_widths'],
+      'l-grid--' . $this->configuration['column_widths']['options'],
     ];
     return $build;
   }
