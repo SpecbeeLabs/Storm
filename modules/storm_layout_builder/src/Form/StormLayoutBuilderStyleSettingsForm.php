@@ -100,6 +100,21 @@ class StormLayoutBuilderStyleSettingsForm extends ConfigFormBase {
       '#title' => $this->t('Spacing right'),
       '#default_value' => $this->config('storm_layout_builder.settings')->get('spacing_right'),
     ];
+
+    $form['theme'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Theme'),
+    ];
+    $form['theme']['markup'] = [
+      '#type' => 'markup',
+      '#markup' => '<p>' . $this->t('Enter the classes which will allow site builders to select from a list of styles to apply to layout builder sections.') . '</p>
+      <p>' . $this->t('Enter one value per line, in the format <b>key|label</b> where <em>key</em> is the CSS class name (without the .), and <em>label</em> is the human readable name.') . '</p>',
+    ];
+    $form['theme']['styles'] = [
+      '#type' => 'textarea',
+      '#default_value' => $this->config('storm_layout_builder.settings')->get('styles'),
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 

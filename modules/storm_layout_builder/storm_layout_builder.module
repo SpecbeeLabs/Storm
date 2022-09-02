@@ -45,7 +45,7 @@ function storm_layout_builder_preprocess_layout(&$variables) {
   ];
 
   // Merge all modifier classes.
-  $class = array_merge($class, [$variables['settings']['section_background']['background_color']], $variables['settings']['section_padding'], $variables['settings']['section_spacing']);
+  $class = array_merge($class, [$variables['settings']['section_background']['background_color']], $variables['settings']['section_padding'], $variables['settings']['section_spacing'], $variables['settings']['section_theme']['styles']);
   // Filter out any none values.
   $class = array_filter($class, fn ($m) => $m != 'none');
 

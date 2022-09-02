@@ -192,7 +192,7 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
         '#empty_value' => 'none',
         '#default_value' => $this->configuration['section_padding'][$key] ?? 'none',
       ];
-      $form['section_padding'][$key]['#options'] = $this->getSpacings($key);
+      $form['section_padding'][$key]['#options'] = $this->getOptions($key);
     }
 
     $form['section_spacing'] = [
@@ -218,9 +218,21 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
         '#empty_value' => 'none',
         '#default_value' => $this->configuration['section_spacing'][$key] ?? 'none',
       ];
-      $form['section_spacing'][$key]['#options'] = $this->getSpacings($key);
+      $form['section_spacing'][$key]['#options'] = $this->getOptions($key);
     }
 
+    $form['section_theme'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Theme'),
+      '#weight' => 3,
+    ];
+    $form['section_theme']['styles'] = [
+      '#type' => 'checkboxes',
+      '#title' => $this->t('Style'),
+      '#multiple' => TRUE,
+      '#options' => $this->getOptions('styles'),
+      '#default_value' => $this->configuration['section_theme']['styles'] ?? NULL,
+    ];
     return parent::buildConfigurationForm($form, $form_state);
   }
 
@@ -243,7 +255,7 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
   /**
    * Helper method to get padding options.
    */
-  private function getSpacings($key) {
+  private function getOptions($key) {
     $config = $this->configFactory->get('storm_layout_builder.settings')->get($key);
     return $this->getConfigValues($config);
   }
