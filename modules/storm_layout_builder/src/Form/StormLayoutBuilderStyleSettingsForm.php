@@ -107,9 +107,18 @@ class StormLayoutBuilderStyleSettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    $ignore = [
+      'submit',
+      'form_build_id',
+      'form_token',
+      'form_id',
+      'op',
+    ];
     $configuration = $this->config('storm_layout_builder.settings');
     foreach ($form_state->getValues() as $key => $value) {
-      $configuration->set($key, trim($value));
+      if (!in_array($key, $ignore)) {
+        $configuration->set($key, trim($value));
+      }
     }
     $configuration->save();
 
