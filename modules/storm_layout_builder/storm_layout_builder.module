@@ -41,13 +41,15 @@ function storm_layout_builder_preprocess_layout(&$variables) {
 
   $class = [
     'l-container',
-    $layout_modifier,
+    $layout_modifier ?? NULL,
   ];
 
-  // Merge all modifier classes.
-  $class = array_merge($class, [$variables['settings']['section_background']['background_color']], $variables['settings']['section_padding'], $variables['settings']['section_spacing'], $variables['settings']['section_theme']['styles']);
-  // Filter out any none values.
-  $class = array_filter($class, fn ($m) => $m != 'none');
+  if ($variables['settings'] && (isset($variables['settings']['section_background']) || isset($variables['settings']['section_padding']) || isset($variables['settings']['section_spacing']) || isset($variables['settings']['section_theme']['styles']))) {
+    // Merge all modifier classes.
+    $class = array_merge($class, [$variables['settings']['section_background']['background_color']], $variables['settings']['section_padding'], $variables['settings']['section_spacing'], $variables['settings']['section_theme']['styles']);
+    // Filter out any none values.
+    $class = array_filter($class, fn ($m) => $m != 'none');
+  }
 
   $media = $variables['settings']['section_background']['background_media'] ?? NULL;
   $position = $variables['settings']['section_background']['background_position'] ?? NULL;

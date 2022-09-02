@@ -9,3 +9,4 @@ spacing_top: "blb-spacing-top-s|Small\r\nblb-spacing-top-m|Medium\r\nblb-spacing
 spacing_bottom: "blb-spacing-bottom-s|Small\r\nblb-spacing-bottom-m|Medium\r\nblb-spacing-bottom-l|Large\r\nblb-spacing-bottom-xl|Extra Large"
 spacing_left: "blb-spacing-left-s|Small\r\nblb-spacing-left-m|Medium\r\nblb-spacing-left-l|Large\r\nblb-spacing-left-xl|Extra Large"
 spacing_right: "blb-spacing-right-s|Small\r\nblb-spacing-right-m|Medium\r\nblb-spacing-right-l|Large\r\nblb-spacing-right-xl|Extra Large"
+styles: "blb-full-width|Full width"

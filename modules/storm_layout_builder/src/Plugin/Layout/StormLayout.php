@@ -226,12 +226,13 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
       '#title' => $this->t('Theme'),
       '#weight' => 3,
     ];
+
     $form['section_theme']['styles'] = [
       '#type' => 'checkboxes',
       '#title' => $this->t('Style'),
       '#multiple' => TRUE,
       '#options' => $this->getOptions('styles'),
-      '#default_value' => $this->configuration['section_theme']['styles'] ?? NULL,
+      '#default_value' => $this->configuration['section_theme']['styles'] ?? [],
     ];
     return parent::buildConfigurationForm($form, $form_state);
   }
