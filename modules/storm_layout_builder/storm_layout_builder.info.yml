@@ -14,5 +14,4 @@ dependencies:
   - layout_builder_restrictions:layout_builder_restrictions
   - layout_disable:layout_disable
   - layout_library:layout_library
-  - media_library_form_element:media_library_form_element
 

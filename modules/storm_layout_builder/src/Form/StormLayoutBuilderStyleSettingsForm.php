@@ -40,6 +40,66 @@ class StormLayoutBuilderStyleSettingsForm extends ConfigFormBase {
       '#description' => $this->t('<p>Enter one value per line, in the format <b>key|label</b> where <em>key</em> is the CSS class name (without the .), and <em>label</em> is the human readable name of the background.</p>'),
       '#default_value' => $this->config('storm_layout_builder.settings')->get('background_colors'),
     ];
+
+    $form['padding'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Padding'),
+    ];
+
+    $form['padding']['markup'] = [
+      '#type' => 'markup',
+      '#markup' => '<p>' . $this->t('Enter one value per line, in the format <b>key|label</b> where <em>key</em> is the CSS class name (without the .), and <em>label</em> is the human readable name.') . '</p>',
+    ];
+
+    $form['padding']['padding_top'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Padding top'),
+      '#default_value' => $this->config('storm_layout_builder.settings')->get('padding_top'),
+    ];
+    $form['padding']['padding_bottom'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Padding bottom'),
+      '#default_value' => $this->config('storm_layout_builder.settings')->get('padding_bottom'),
+    ];
+    $form['padding']['padding_left'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Padding left'),
+      '#default_value' => $this->config('storm_layout_builder.settings')->get('padding_left'),
+    ];
+    $form['padding']['padding_right'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Padding right'),
+      '#default_value' => $this->config('storm_layout_builder.settings')->get('padding_right'),
+    ];
+
+    $form['spacing'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Spacing'),
+    ];
+    $form['spacing']['markup'] = [
+      '#type' => 'markup',
+      '#markup' => '<p>' . $this->t('Enter one value per line, in the format <b>key|label</b> where <em>key</em> is the CSS class name (without the .), and <em>label</em> is the human readable name.') . '</p>',
+    ];
+    $form['spacing']['spacing_top'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Spacing top'),
+      '#default_value' => $this->config('storm_layout_builder.settings')->get('spacing_top'),
+    ];
+    $form['spacing']['spacing_bottom'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Spacing bottom'),
+      '#default_value' => $this->config('storm_layout_builder.settings')->get('spacing_bottom'),
+    ];
+    $form['spacing']['spacing_left'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Spacing left'),
+      '#default_value' => $this->config('storm_layout_builder.settings')->get('spacing_left'),
+    ];
+    $form['spacing']['spacing_right'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Spacing right'),
+      '#default_value' => $this->config('storm_layout_builder.settings')->get('spacing_right'),
+    ];
     return parent::buildForm($form, $form_state);
   }
 
@@ -47,9 +107,12 @@ class StormLayoutBuilderStyleSettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->config('storm_layout_builder.settings')
-      ->set('background_colors', trim($form_state->getValue('background_colors')))
-      ->save();
+    $configuration = $this->config('storm_layout_builder.settings');
+    foreach ($form_state->getValues() as $key => $value) {
+      $configuration->set($key, trim($value));
+    }
+    $configuration->save();
+
     parent::submitForm($form, $form_state);
   }
 

@@ -91,13 +91,13 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
         'h5' => $this->t('H5'),
         'h6' => $this->t('H6'),
       ],
-      '#default_value' => $this->configuration['heading_style'] ?? 'h1',
+      '#default_value' => $this->configuration['section_title']['heading_style'] ?? 'h1',
     ];
 
     $form['section_title']['heading'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
-      '#default_value' => $this->configuration['heading'] ?? '',
+      '#default_value' => $this->configuration['section_title']['heading'] ?? '',
     ];
 
     $form['section_title']['heading_alignment'] = [
@@ -108,7 +108,7 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
         'text-align-right' => $this->t('Right'),
         'text-align-center' => $this->t('Center'),
       ],
-      '#default_value' => $this->configuration['heading_alignment'] ?? 'text-align-left',
+      '#default_value' => $this->configuration['section_title']['heading_alignment'] ?? 'text-align-left',
     ];
 
     $form['section_background'] = [
@@ -117,20 +117,20 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
       '#weight' => 3,
     ];
 
-    $form['section_background']['color'] = [
+    $form['section_background']['background_color'] = [
       '#type' => 'radios',
       '#options' => $this->getColors(),
-      '#default_value' => $this->configuration['background_color'] ?? 'slb-bg-none',
+      '#default_value' => $this->configuration['section_background']['background_color'] ?? 'slb-bg-none',
     ];
 
-    $form['section_background']['media'] = [
+    $form['section_background']['background_media'] = [
       '#type' => 'media_library',
       '#allowed_bundles' => ['image'],
       '#title' => $this->t('Background Image'),
-      '#default_value' => $this->configuration['background_media'] ?? NULL,
+      '#default_value' => $this->configuration['section_background']['background_media'] ?? NULL,
       '#description' => $this->t('Upload or select a background image.'),
     ];
-    $form['section_background']['position'] = [
+    $form['section_background']['background_position'] = [
       '#type' => 'select',
       '#title' => $this->t('Background image position'),
       '#options' => [
@@ -144,20 +144,20 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
         'right center' => $this->t('Right center'),
         'right bottom' => $this->t('Right bottom'),
       ],
-      '#default_value' => $this->configuration['background_position'] ?? 'center center',
+      '#default_value' => $this->configuration['section_background']['background_position'] ?? 'center center',
     ];
 
-    $form['section_background']['size'] = [
+    $form['section_background']['background_size'] = [
       '#type' => 'select',
       '#title' => $this->t('Background image size'),
       '#options' => [
         'cover' => $this->t('Cover'),
         'contain' => $this->t('Contain'),
       ],
-      '#default_value' => $this->configuration['background_size'] ?? 'cover',
+      '#default_value' => $this->configuration['section_background']['background_size'] ?? 'cover',
     ];
 
-    $form['section_background']['repeat'] = [
+    $form['section_background']['background_repeat'] = [
       '#type' => 'select',
       '#title' => $this->t('Background image repeat'),
       '#options' => [
@@ -166,8 +166,60 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
         'repeat-x' => $this->t('Repeat X'),
         'repeat-y' => $this->t('Repeat Y'),
       ],
-      '#default_value' => $this->configuration['background_repeat'] ?? 'no-repeat',
+      '#default_value' => $this->configuration['section_background']['background_repeat'] ?? 'no-repeat',
     ];
+
+    $form['section_padding'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Padding'),
+      '#weight' => 3,
+    ];
+
+    $padding = [
+      'padding_top' => $this->t('Top padding'),
+      'padding_bottom' => $this->t('Bottom padding'),
+      'padding_left' => $this->t('Left padding'),
+      'padding_right' => $this->t('Right padding'),
+    ];
+
+    foreach ($padding as $key => $value) {
+      $form['section_padding'][$key] = [
+        '#type' => 'select',
+        '#title' => $value,
+        '#options' => [
+          'none' => $this->t('None'),
+        ],
+        '#empty_value' => 'none',
+        '#default_value' => $this->configuration['section_padding'][$key] ?? 'none',
+      ];
+      $form['section_padding'][$key]['#options'] = $this->getSpacings($key);
+    }
+
+    $form['section_spacing'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Spacing'),
+      '#weight' => 3,
+    ];
+
+    $spacing = [
+      'spacing_top' => $this->t('Top spacing'),
+      'spacing_bottom' => $this->t('Bottom spacing'),
+      'spacing_left' => $this->t('Left spacing'),
+      'spacing_right' => $this->t('Right spacing'),
+    ];
+
+    foreach ($spacing as $key => $value) {
+      $form['section_spacing'][$key] = [
+        '#type' => 'select',
+        '#title' => $value,
+        '#options' => [
+          'none' => $this->t('None'),
+        ],
+        '#empty_value' => 'none',
+        '#default_value' => $this->configuration['section_spacing'][$key] ?? 'none',
+      ];
+      $form['section_spacing'][$key]['#options'] = $this->getSpacings($key);
+    }
 
     return parent::buildConfigurationForm($form, $form_state);
   }
@@ -186,6 +238,14 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
     $options = ['slb-bg-none' => "<span class='slb-bg-none' title='None'></span>"] + $options;
 
     return $options;
+  }
+
+  /**
+   * Helper method to get padding options.
+   */
+  private function getSpacings($key) {
+    $config = $this->configFactory->get('storm_layout_builder.settings')->get($key);
+    return $this->getConfigValues($config);
   }
 
   /**
@@ -208,17 +268,10 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
    */
   public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
     parent::submitConfigurationForm($form, $form_state);
-    $section_title = $form_state->getValue('section_title');
-    $this->configuration['heading'] = $section_title['heading'];
-    $this->configuration['heading_style'] = $section_title['heading_style'];
-    $this->configuration['heading_alignment'] = $section_title['heading_alignment'];
 
-    $background = $form_state->getValue('section_background');
-    $this->configuration['background_color'] = $background['color'];
-    $this->configuration['background_media'] = $background['media'] ?? NULL;
-    $this->configuration['background_position'] = $background['position'];
-    $this->configuration['background_size'] = $background['size'];
-    $this->configuration['background_repeat'] = $background['repeat'];
+    foreach ($form_state->getValues() as $key => $config) {
+      $this->configuration[$key] = $config;
+    }
   }
 
 }
