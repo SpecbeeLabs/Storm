@@ -1,27 +1,27 @@
 .storm-component-browser {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
   padding: 36px 0;
 }
 
 .storm-component-browser > a {
   position: relative;
   display: inline-block;
+  width: calc(33% - 15px);
+  margin: 8px;
+  padding: 20px 20px 20px 60px;
   text-align: left;
   text-decoration: none;
   color: var(--colorGinPrimary);
-  font-weight: 500;
-  border: 1px solid var(--colorGinPrimary);;
+  border: 1px solid var(--colorGinPrimary);
   border-radius: 0;
-  padding: 20px 20px 20px 60px;
-  width: calc(33% - 15px);
+  font-weight: 500;
 }
 
 .storm-component-browser > a > img {
   position: absolute;
-  left: 8px;
   top: 50%;
+  left: 8px;
   width: 32px;
   height: 32px;
   transform: translateY(-50%);
