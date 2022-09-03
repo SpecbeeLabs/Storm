@@ -3,7 +3,7 @@ status: true
 dependencies: {  }
 id: text
 block_id: 'inline_block:text'
-category: content
+category: component
 label: Text
 image_path: ''
 image_alt: ''

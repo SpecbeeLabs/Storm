@@ -3,7 +3,7 @@ status: true
 dependencies: {  }
 id: card
 block_id: 'inline_block:card'
-category: content
+category: component
 label: Card
 image_path: ''
 image_alt: ''
