@@ -48,6 +48,7 @@ install:
   - admin_toolbar:admin_toolbar
   - admin_toolbar_tools:admin_toolbar_tools
   - auto_entitylabel:auto_entitylabel
+  - clientside_validation:clientside_validation
   - entity_embed:entity_embed
   - field_group:field_group
   - filefield_paths:filefield_paths
@@ -71,6 +72,7 @@ install:
   - storm_search:storm_search
   - storm_security:storm_security
   - storm_seo:storm_seo
+  - storm_webform:storm_webform
 themes:
   - olivero
   - gin
