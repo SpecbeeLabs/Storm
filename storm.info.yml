@@ -55,7 +55,6 @@ install:
   - link_attributes:link_attributes
   - linked_field:linked_field
   - linkit:linkit
-  - moderation_sidebar:moderation_sidebar
   - token:token
   - twig_tweak:twig_tweak
   - twig_field_value:twig_field_value

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1fd9e0547ea7eda2af0473d1ea3046fb",
+    "content-hash": "01112fc2662874f1c9719f4076754f96",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3718,54 +3718,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/moderation_dashboard",
                 "issues": "https://drupal.org/project/issues/moderation_dashboard"
-            }
-        },
-        {
-            "name": "drupal/moderation_sidebar",
-            "version": "1.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/moderation_sidebar.git",
-                "reference": "8.x-1.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/moderation_sidebar-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "d3391f5ca10a9d145d217ef2ce0b463d90a14510"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1648129967",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "joelpittet",
-                    "homepage": "https://www.drupal.org/user/160302"
-                },
-                {
-                    "name": "samuel.mortenson",
-                    "homepage": "https://www.drupal.org/user/2582268"
-                }
-            ],
-            "description": "Provides a frontend sidebar for Content Moderation",
-            "homepage": "https://www.drupal.org/project/moderation_sidebar",
-            "support": {
-                "source": "https://git.drupalcode.org/project/moderation_sidebar"
             }
         },
         {

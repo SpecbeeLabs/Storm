@@ -2,7 +2,7 @@ storm_layout_onecol:
   label: 'Storm One column'
   path: layouts/onecol_section
   template: layout--onecol
-  library: storm_layout_builder/layout
+  library: storm_layout_builder/layout.base
   class: '\Drupal\storm_layout_builder\Plugin\Layout\StormLayout'
   category: 'Columns: 1'
   default_region: content
