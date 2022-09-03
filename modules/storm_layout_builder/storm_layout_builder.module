@@ -5,6 +5,7 @@
  * Layout builder customizations by Storm.
  */
 
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Template\Attribute;
 use Drupal\file\Entity\File;
 use Drupal\media\Entity\Media;
@@ -76,4 +77,12 @@ function storm_layout_builder_preprocess_layout(&$variables) {
     'class' => $class,
     'style' => $background_media ?? NULL,
   ]);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function storm_layout_builder_form_layout_builder_browser_block_add_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['image_path']['#required'] = TRUE;
+  $form['image_path']['#default_value'] = '/profiles/contrib/storm/modules/storm_layout_builder/assets/default.png';
 }

@@ -1,0 +1,28 @@
+.storm-component-browser {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 0;
+}
+
+.storm-component-browser > a {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  text-decoration: none;
+  color: var(--colorGinPrimary);
+  font-weight: 500;
+  border: 1px solid var(--colorGinPrimary);;
+  border-radius: 0;
+  padding: 20px 20px 20px 60px;
+  width: calc(33% - 15px);
+}
+
+.storm-component-browser > a > img {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  transform: translateY(-50%);
+}

@@ -33,3 +33,8 @@ form:
   css:
     component:
       css/storm-layout-builder-settings.css: {}
+
+browser:
+  css:
+    theme:
+      css/component-browser.css: {}
