@@ -1,6 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-id: content
-label: Content
+id: component
+label: Component
 weight: null
