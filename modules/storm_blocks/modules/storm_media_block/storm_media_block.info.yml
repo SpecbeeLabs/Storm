@@ -3,9 +3,4 @@ description: 'Provides a Media block type to add Image and Video media entities.
 type: module
 core_version_requirement: '^8.9 || ^9'
 dependencies:
-  - block_content
-  - field
-  - layout_builder
-  - media
-  - media_library
-  - node
+  - storm_blocks:storm_blocks
