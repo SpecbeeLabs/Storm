@@ -73,6 +73,7 @@ install:
   - storm_security:storm_security
   - storm_seo:storm_seo
   - storm_webform:storm_webform
+  - storm_landing_page:storm_landing_page
 themes:
   - olivero
   - gin

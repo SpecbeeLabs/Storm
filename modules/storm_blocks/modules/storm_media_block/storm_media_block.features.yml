@@ -1,0 +1,4 @@
+excluded:
+  - field.field.node.landing_page.layout_builder__layout
+  - field.storage.node.layout_builder__layout
+required: true
