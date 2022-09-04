@@ -66,6 +66,7 @@ install:
   - storm_blocks:storm_block_block_ref
   - storm_blocks:storm_block_card
   - storm_blocks:storm_block_content_ref
+  - storm_blocks:storm_block_cta_button
   - storm_blocks:storm_block_media
   - storm_blocks:storm_block_text
   - storm_blocks:storm_block_view
