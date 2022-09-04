@@ -1,6 +1,0 @@
-storm_layout_builder.style_settings:
-  title: Layout builder styles
-  description: Configure styles for Storm Layout builder
-  route_name: storm_layout_builder.style_settings
-  parent: storm.settings
-  weight: 10
