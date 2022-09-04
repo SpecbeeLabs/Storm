@@ -6,6 +6,7 @@
   justify-content: space-between;
   font-weight: 800;
   border: 2px solid #0d0d0d;
+  text-transform: initial;
 }
 
 .ui-accordion .storm-accordion-label.ui-accordion-header.ui-state-active {
@@ -14,7 +15,8 @@
 
 .ui-accordion-header-icon.ui-icon,
 .ui-state-hover .ui-accordion-header-icon.ui-icon,
-.ui-state-focus .ui-accordion-header-icon.ui-icon {
+.ui-state-focus .ui-accordion-header-icon.ui-icon,
+.storm-accordion-label.ui-state-default .ui-icon {
   background-image: url("../../assets/drop.svg");
   background-size: 25px;
   background-repeat: no-repeat;
