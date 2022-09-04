@@ -5,6 +5,6 @@ id: text
 block_id: "inline_block:text"
 category: component
 label: Text
-image_path: /profiles/contrib/storm/modules/storm_layout_builder/assets/default.png
+image_path: /profiles/contrib/storm/modules/storm_layout_builder/assets/text.png
 image_alt: "Text icon"
 weight: -100

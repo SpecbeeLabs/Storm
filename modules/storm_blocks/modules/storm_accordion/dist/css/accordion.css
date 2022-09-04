@@ -1,16 +1,16 @@
 .ui-accordion .storm-accordion-label.ui-accordion-header {
   background-color: #fff;
-  color: #0d0d0d;
+  color: #1b1b1d;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-weight: 800;
-  border: 2px solid #0d0d0d;
+  border: 2px solid #1b1b1d;
   text-transform: initial;
 }
 
 .ui-accordion .storm-accordion-label.ui-accordion-header.ui-state-active {
-  border-color: #0d0d0d;
+  border-color: #1b1b1d;
 }
 
 .ui-accordion-header-icon.ui-icon,
@@ -36,6 +36,6 @@
 }
 
 .ui-accordion .storm-accordion-pane-content.ui-accordion-content {
-  border: 2px solid #0d0d0d;
+  border: 2px solid #1b1b1d;
   border-top: none;
 }
