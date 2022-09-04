@@ -1,4 +1,4 @@
-name: Storm blocks - Text
+name: Storm block - Text
 type: module
 description: Provides a basic text block type.
 package: Storm

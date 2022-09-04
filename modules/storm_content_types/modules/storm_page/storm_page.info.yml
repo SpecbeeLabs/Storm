@@ -2,6 +2,7 @@ name: 'Basic Page'
 description: 'Provides Basic Page content type and related configuration. Use <em>basic pages</em> for your static content, such as a ''''Privacy Policy'''' page.'
 type: module
 core_version_requirement: '^8.9 || ^9'
+package: Storm
 dependencies:
   - storm:storm_content_types
   - drupal:field

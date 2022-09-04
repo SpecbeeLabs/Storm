@@ -1,4 +1,4 @@
-name: Storm blocks - Card
+name: Storm block - Card
 type: module
 description: Provides a card block type with an image, title, text and link.
 package: Storm

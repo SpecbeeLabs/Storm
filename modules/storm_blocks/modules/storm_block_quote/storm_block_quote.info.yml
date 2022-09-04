@@ -1,4 +1,4 @@
-name: Storm blocks - Quote
+name: Storm block - Quote
 type: module
 description: Provides a quote block type to place testimonial component.
 package: Storm
