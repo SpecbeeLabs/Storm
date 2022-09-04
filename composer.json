@@ -10,6 +10,7 @@
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/autocomplete_deluxe": "^2.0",
         "drupal/backup_migrate": "^5.0",
+        "drupal/block_field": "^1.0@RC",
         "drupal/clientside_validation": "^4.0",
         "drupal/core": "^9.4",
         "drupal/devel": "^4.1",
@@ -137,6 +138,9 @@
         "patches": {
             "drupal/core": {
                 "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch"
+            },
+            "drupal/block_field": {
+                "2983237 - Add IEF and entity_browser module support": "https://www.drupal.org/files/issues/2022-08-09/block_field-2983237-11.patch"
             },
             "drupal/elasticsearch_connector": {
                 "2850749 - Cannot load the Elasticsearch cluster for your index": "https://www.drupal.org/files/issues/2021-12-01/cannot-load-cluster-exception-2850749-10.patch"
