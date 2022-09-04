@@ -60,21 +60,22 @@ install:
   - twig_tweak:twig_tweak
   - twig_field_value:twig_field_value
   # Storm
-  - storm_accordion:storm_accordion
   - storm_article:storm_article
   - storm_blocks:storm_blocks
-  - storm_card:storm_card
+  - storm_blocks:storm_block_accordion
+  - storm_blocks:storm_block_card
+  - storm_blocks:storm_block_media
+  - storm_blocks:storm_block_text
+  - storm_blocks:storm_block_view
+  - storm_blocks:storm_block_webform
   - storm_content_types:storm_content_types
   - storm_landing_page:storm_landing_page
   - storm_layout_builder:storm_layout_builder
   - storm_media:storm_media
-  - storm_media_block:storm_media_block
   - storm_page:storm_page
   - storm_search:storm_search
   - storm_security:storm_security
   - storm_seo:storm_seo
-  - storm_text:storm_text
-  - storm_view:storm_view
   - storm_webform:storm_webform
 
 themes:
