@@ -60,22 +60,23 @@ install:
   - twig_tweak:twig_tweak
   - twig_field_value:twig_field_value
   # Storm
-  - storm_media:storm_media
-  - storm_layout_builder:storm_layout_builder
-  - storm_blocks:storm_blocks
-  - storm_text:storm_text
-  - storm_card:storm_card
-  - storm_media_block:storm_media_block
   - storm_accordion:storm_accordion
-  - storm_view:storm_view
-  - storm_content_types:storm_content_types
   - storm_article:storm_article
+  - storm_blocks:storm_blocks
+  - storm_card:storm_card
+  - storm_content_types:storm_content_types
+  - storm_landing_page:storm_landing_page
+  - storm_layout_builder:storm_layout_builder
+  - storm_media:storm_media
+  - storm_media_block:storm_media_block
   - storm_page:storm_page
   - storm_search:storm_search
   - storm_security:storm_security
   - storm_seo:storm_seo
+  - storm_text:storm_text
+  - storm_view:storm_view
   - storm_webform:storm_webform
-  - storm_landing_page:storm_landing_page
+
 themes:
   - olivero
   - gin
