@@ -6,3 +6,4 @@ dependencies:
   - storm_blocks:storm_blocks
   - entity_reference_revisions:entity_reference_revisions
   - paragraphs:paragraphs
+  - twig_field_value:twig_field_value
