@@ -17,6 +17,7 @@
         "drupal/devel": "^4.1",
         "drupal/devel_kint_extras": "^1.0",
         "drupal/elasticsearch_connector": "^7.0@alpha",
+        "drupal/entity_clone": "^1.0@beta",
         "drupal/entity_embed": "^1.2",
         "drupal/entity_print": "^2.6",
         "drupal/entity_reference_display": "^1.4",

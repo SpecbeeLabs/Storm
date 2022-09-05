@@ -50,6 +50,7 @@ install:
   - advagg:advagg
   - auto_entitylabel:auto_entitylabel
   - clientside_validation:clientside_validation
+  - entity_clone:entity_clone
   - entity_embed:entity_embed
   - field_group:field_group
   - filefield_paths:filefield_paths
