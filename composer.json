@@ -63,7 +63,8 @@
         "drupal/webform_views": "^5.0@beta",
         "drupal/webp": "^1.0@beta",
         "drupal/xmlsitemap": "^1.2",
-        "drupal/yoast_seo": "^2.0@alpha"
+        "drupal/yoast_seo": "^2.0@alpha",
+        "npm-asset/jquery-validation": "^1.17"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23"
