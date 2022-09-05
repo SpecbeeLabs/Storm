@@ -241,7 +241,7 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
    * Helper method to build color options scheme.
    */
   private function getColors() {
-    $config = $this->configFactory->get('storm_layout_builder.settings')->get('background_colors');
+    $config = $this->configFactory->get('storm.layout_builder.settings')->get('background_colors');
     $colors = $this->getConfigValues($config);
 
     foreach ($colors as $class => $color) {
@@ -257,7 +257,7 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
    * Helper method to get padding options.
    */
   private function getOptions($key) {
-    $config = $this->configFactory->get('storm_layout_builder.settings')->get($key);
+    $config = $this->configFactory->get('storm.layout_builder.settings')->get($key);
     return $this->getConfigValues($config);
   }
 
