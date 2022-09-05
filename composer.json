@@ -7,6 +7,7 @@
         "bower-asset/lazysizes": "^5.3",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.1",
+        "drupal/advagg": "^5.0",
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/autocomplete_deluxe": "^2.0",
         "drupal/backup_migrate": "^5.0",

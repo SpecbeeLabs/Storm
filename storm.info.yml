@@ -47,6 +47,7 @@ install:
   # Contrib
   - admin_toolbar:admin_toolbar
   - admin_toolbar_tools:admin_toolbar_tools
+  - advagg:advagg
   - auto_entitylabel:auto_entitylabel
   - clientside_validation:clientside_validation
   - entity_embed:entity_embed
