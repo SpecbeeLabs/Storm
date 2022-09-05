@@ -16,7 +16,7 @@ storm.layout_builder.style_settings:
 
 
 storm.cta_button.types:
-  path: '/admin/config/system/storm/layout-builder/styles'
+  path: '/admin/config/system/storm/cta-button/types'
   defaults:
     _title: 'CTA Button Types'
     _form: 'Drupal\storm\Form\StormCtaButtonTypeValuesForm'
