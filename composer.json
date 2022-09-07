@@ -12,6 +12,7 @@
         "drupal/autocomplete_deluxe": "^2.0",
         "drupal/backup_migrate": "^5.0",
         "drupal/block_field": "^1.0@RC",
+        "drupal/block_visibility_groups": "^1.4",
         "drupal/clientside_validation": "^4.0",
         "drupal/core": "^9.4",
         "drupal/devel": "^4.1",

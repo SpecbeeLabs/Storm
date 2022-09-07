@@ -49,6 +49,7 @@ install:
   - admin_toolbar_tools:admin_toolbar_tools
   - advagg:advagg
   - auto_entitylabel:auto_entitylabel
+  - block_visibility_groups:block_visibility_groups
   - clientside_validation:clientside_validation
   - entity_clone:entity_clone
   - entity_embed:entity_embed
