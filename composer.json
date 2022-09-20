@@ -65,7 +65,8 @@
         "drupal/webp": "^1.0@beta",
         "drupal/xmlsitemap": "^1.2",
         "drupal/yoast_seo": "^2.0@alpha",
-        "npm-asset/jquery-validation": "^1.17"
+        "npm-asset/jquery-validation": "^1.17",
+        "drupal/r4032login": "^2.2"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23"
