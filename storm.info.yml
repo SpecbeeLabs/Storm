@@ -59,6 +59,7 @@ install:
   - link_attributes:link_attributes
   - linked_field:linked_field
   - linkit:linkit
+  - simple_pass_reset:simple_pass_reset
   - token:token
   - twig_tweak:twig_tweak
   - twig_field_value:twig_field_value
