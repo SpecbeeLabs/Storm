@@ -169,6 +169,16 @@ class StormLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
       '#default_value' => $this->configuration['section_background']['background_repeat'] ?? 'no-repeat',
     ];
 
+    $form['section_background']['background_attachment'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Background attachment'),
+      '#options' => [
+        'fixed' => $this->t('Fixed'),
+        'scroll' => $this->t('Scroll'),
+      ],
+      '#default_value' => $this->configuration['section_background']['background_attachment'] ?? 'scroll',
+    ];
+
     $form['section_padding'] = [
       '#type' => 'details',
       '#title' => $this->t('Padding'),

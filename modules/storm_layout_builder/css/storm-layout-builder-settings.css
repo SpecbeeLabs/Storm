@@ -5,7 +5,7 @@
   margin-right: 5px;
 }
 
-.form-item-layout-settings-section-background-background-color .glb-form-boolean {
+.form-item-layout-settings-section-background-background-color .glb-form-boolean--type-radio {
   display: none;
 }
 
@@ -17,12 +17,12 @@
   padding: 0;
 }
 
-.form-item-layout-settings-section-background-background-color .glb-form-boolean:checked + .glb-form-item__label.glb-option span {
+.form-item-layout-settings-section-background-background-color .glb-form-boolean--type-radio:checked + .glb-form-item__label.glb-option span {
   background: url("../assets/check.png") no-repeat center center;
 }
 
 .form-item-layout-settings-section-background-background-color .slb-bg-none,
-.form-item-layout-settings-section-background-background-color .glb-form-boolean:checked + .glb-form-item__label.glb-option span.slb-bg-none {
+.form-item-layout-settings-section-background-background-color .glb-form-boolean--type-radio:checked + .glb-form-item__label.glb-option span.slb-bg-none {
   background: url("../assets/cancel.png") no-repeat center center !important;
 }
 

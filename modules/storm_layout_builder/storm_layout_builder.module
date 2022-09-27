@@ -56,6 +56,7 @@ function storm_layout_builder_preprocess_layout(&$variables) {
   $position = $variables['settings']['section_background']['background_position'] ?? NULL;
   $size = $variables['settings']['section_background']['background_size'] ?? NULL;
   $repeat = $variables['settings']['section_background']['background_repeat'] ?? NULL;
+  $attachment = $variables['settings']['section_background']['background_attachment'] ?? NULL;
 
   if ($media) {
     $entity = Media::load($media);
@@ -68,6 +69,7 @@ function storm_layout_builder_preprocess_layout(&$variables) {
         'background-position: ' . $position . ';',
         'background-size: ' . $size . ';',
         'background-repeat: ' . $repeat . ';',
+        'background-attachment: ' . $attachment . ';',
       ];
 
     }
