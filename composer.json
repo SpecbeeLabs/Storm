@@ -49,12 +49,14 @@
         "drupal/paragraphs": "^1.15",
         "drupal/password_policy": "^3.1",
         "drupal/pathauto": "^1.9",
+        "drupal/r4032login": "^2.2",
         "drupal/recaptcha": "^3.0",
         "drupal/redirect": "^1.7",
         "drupal/robotstxt": "^1.4",
         "drupal/search_api": "^1.23",
         "drupal/seckit": "^2.0",
         "drupal/seo_checklist": "^5.1",
+        "drupal/simple_pass_reset": "^1.1",
         "drupal/simple_sitemap": "^4.0",
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^3.1",
@@ -65,9 +67,7 @@
         "drupal/webp": "^1.0@beta",
         "drupal/xmlsitemap": "^1.2",
         "drupal/yoast_seo": "^2.0@alpha",
-        "npm-asset/jquery-validation": "^1.17",
-        "drupal/r4032login": "^2.2",
-        "drupal/simple_pass_reset": "^1.1"
+        "npm-asset/jquery-validation": "^1.17"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23"
