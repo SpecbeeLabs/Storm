@@ -92,4 +92,3 @@ themes:
 distribution:
   name: "Storm"
 project: "storm"
-core_incompatible: false
