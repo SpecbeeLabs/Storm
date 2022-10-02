@@ -8,5 +8,6 @@ dependencies:
   - drupal:media
   - drupal:media_library
   - drupal:responsive_image
+  - focal_point:focal_point
   - lazy:lazy
   - webp:webp
