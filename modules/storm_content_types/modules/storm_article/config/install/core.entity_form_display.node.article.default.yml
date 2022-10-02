@@ -15,13 +15,15 @@ dependencies:
     - field.field.node.article.field_video
     - field.field.node.article.field_yoast_seo
     - node.type.article
+    - workflows.workflow.editorial
   module:
-    - autocomplete_deluxe
+    - content_moderation
     - field_group
     - link
     - media_library
     - metatag
     - path
+    - select2
     - text
     - yoast_seo
 third_party_settings:
@@ -141,21 +143,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_tags:
-    type: autocomplete_deluxe
+    type: select2_entity_reference
     weight: 7
     region: content
     settings:
+      width: 100%
+      autocomplete: true
       match_operator: CONTAINS
-      autocomplete_route_name: autocomplete_deluxe.autocomplete
-      size: 60
-      selection_handler: default
-      limit: 10
-      min_length: 0
-      delimiter: ''
-      not_found_message_allow: false
-      not_found_message: 'The term ''@term'' will be added'
-      new_terms: true
-      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
+      match_limit: 10
     third_party_settings: {  }
   field_teaser_text:
     type: string_textarea
@@ -184,7 +179,8 @@ content:
     weight: 52
     region: content
     settings:
-      body: body
+      edit_title: false
+      edit_description: false
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default

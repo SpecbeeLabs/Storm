@@ -25,6 +25,7 @@
         "drupal/field_group": "^3.2",
         "drupal/filefield_paths": "^1.0@beta",
         "drupal/flood_control": "^2.2",
+        "drupal/focal_point": "^1.5",
         "drupal/gin": "^3.0@alpha",
         "drupal/gin_lb": "^1.0@beta",
         "drupal/google_analytics": "^4.0",
@@ -53,6 +54,7 @@
         "drupal/robotstxt": "^1.4",
         "drupal/search_api": "^1.23",
         "drupal/seckit": "^2.0",
+        "drupal/select2": "^1.13",
         "drupal/seo_checklist": "^5.1",
         "drupal/simple_pass_reset": "^1.1",
         "drupal/simple_sitemap": "^4.0",
@@ -66,8 +68,7 @@
         "drupal/xmlsitemap": "^1.2",
         "drupal/yoast_seo": "^2.0@alpha",
         "npm-asset/jquery-validation": "^1.17",
-        "drupal/autocomplete_deluxe": "^2.0",
-        "drupal/focal_point": "^1.5"
+        "npm-asset/select2": "^4.0"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23"
