@@ -38,3 +38,10 @@ browser:
   css:
     theme:
       css/component-browser.css: {}
+
+gin_lb:
+  js:
+    js/gin-lb.js: {}
+  css:
+    theme:
+      css/gin-lb.css: {}

@@ -88,3 +88,12 @@ function storm_layout_builder_form_layout_builder_browser_block_add_form_alter(&
   $form['image_path']['#required'] = TRUE;
   $form['image_path']['#default_value'] = '/profiles/contrib/storm/modules/storm_layout_builder/assets/default.png';
 }
+
+/**
+ * Implements hook_page_attachments().
+ */
+function storm_layout_builder_page_attachments(array &$attachments) {
+  if (gin_lb_is_layout_builder_route()) {
+    $attachments['#attached']['library'][] = 'storm_layout_builder/gin_lb';
+  }
+}
