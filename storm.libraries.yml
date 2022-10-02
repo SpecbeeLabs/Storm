@@ -1,4 +1,11 @@
+global:
+  version: VERSION
+  css:
+    theme:
+      css/global.css: {}
+
 overrides:
+  version: VERSION
   css:
     theme:
       css/storm.css: {}

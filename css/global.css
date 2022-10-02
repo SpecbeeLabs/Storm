@@ -1,0 +1,13 @@
+/**
+ * @file
+ * Overrides to default variables provided by Gin globally.
+ */
+
+
+:root {
+  --ginBorderXSmall: 0 !important;
+  --ginBorderSmall: 0 !important;
+  --ginBorderDefault: 0 !important;
+  --ginBorderMedium: 0 !important;
+  --ginBorderLarge: 0 !important
+}

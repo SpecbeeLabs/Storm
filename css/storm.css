@@ -35,11 +35,6 @@
 
 :root {
   --font: "metropolis", sans-serif;
-  --ginBorderXSmall: 0 !important;
-  --ginBorderSmall: 0 !important;
-  --ginBorderDefault: 0 !important;
-  --ginBorderMedium: 0 !important;
-  --ginBorderLarge: 0 !important
 }
 
 html {
