@@ -151,6 +151,9 @@
             },
             "drupal/elasticsearch_connector": {
                 "2850749 - Cannot load the Elasticsearch cluster for your index": "https://www.drupal.org/files/issues/2021-12-01/cannot-load-cluster-exception-2850749-10.patch"
+            },
+            "drupal/layout_builder_modal": {
+                "3196147 - Move block description into modal title": "https://www.drupal.org/files/issues/2021-04-06/block-title-in-modal-title-3196147-9.patch"
             }
         }
     }
