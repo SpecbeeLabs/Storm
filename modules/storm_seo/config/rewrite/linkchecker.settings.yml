@@ -1,3 +1,4 @@
+config_rewrite: replace
 check_links_types: 0
 default_url_scheme: 'http://'
 base_path: ''

@@ -1,3 +1,4 @@
+config_rewrite: replace
 skipClass: no-lazy
 disable_admin: true
 visibility:

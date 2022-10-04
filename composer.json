@@ -69,7 +69,8 @@
         "drupal/yoast_seo": "^2.0@alpha",
         "npm-asset/jquery-validation": "^1.17",
         "npm-asset/select2": "^4.0",
-        "drupal/search_api_block": "^1.1"
+        "drupal/search_api_block": "^1.1",
+        "drupal/config_rewrite": "^1.5"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23"
