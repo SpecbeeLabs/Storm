@@ -7,4 +7,5 @@ package: Storm
 dependencies:
   - search_api:search_api
   - search_api:search_api_db
+  - search_api_block:search_api_block
   - facets:facets
