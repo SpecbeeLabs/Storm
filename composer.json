@@ -13,6 +13,7 @@
         "drupal/block_field": "^1.0@RC",
         "drupal/block_visibility_groups": "^1.4",
         "drupal/clientside_validation": "^4.0",
+        "drupal/config_rewrite": "^1.5",
         "drupal/core": "^9.4",
         "drupal/devel": "^4.1",
         "drupal/devel_kint_extras": "^1.0",
@@ -53,6 +54,7 @@
         "drupal/redirect": "^1.7",
         "drupal/robotstxt": "^1.4",
         "drupal/search_api": "^1.23",
+        "drupal/search_api_block": "^1.1",
         "drupal/seckit": "^2.0",
         "drupal/select2": "^1.13",
         "drupal/seo_checklist": "^5.1",
@@ -68,9 +70,7 @@
         "drupal/xmlsitemap": "^1.2",
         "drupal/yoast_seo": "^2.0@alpha",
         "npm-asset/jquery-validation": "^1.17",
-        "npm-asset/select2": "^4.0",
-        "drupal/search_api_block": "^1.1",
-        "drupal/config_rewrite": "^1.5"
+        "npm-asset/select2": "^4.0"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23"
@@ -95,7 +95,8 @@
     "config": {
         "allow-plugins": {
             "cweagans/composer-patches": true,
-            "ergebnis/composer-normalize": true
+            "ergebnis/composer-normalize": true,
+            "drupal/core-project-message": true
         }
     },
     "extra": {
