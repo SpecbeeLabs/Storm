@@ -62,14 +62,13 @@ settings:
             - PasteText
             - PasteFromWord
             - '-'
+            - ShowBlocks
             - Source
             - Maximize
   plugins:
     drupallink:
       linkit_enabled: true
       linkit_profile: default
-    language:
-      language_list: un
     stylescombo:
       styles: "a.button|Button\r\np.lead|Lead text\r\np.small|Small text"
 image_upload:

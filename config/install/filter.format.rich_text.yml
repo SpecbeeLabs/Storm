@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies:
-  config:
-    - core.entity_view_mode.media.full
   module:
     - entity_embed
     - linkit
@@ -57,6 +55,7 @@ filters:
         default: default
       allowed_media_types:
         image: image
+        remote_video: remote_video
   entity_embed:
     id: entity_embed
     provider: entity_embed
