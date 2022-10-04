@@ -97,3 +97,31 @@ function storm_layout_builder_page_attachments(array &$attachments) {
     $attachments['#attached']['library'][] = 'storm_layout_builder/gin_lb';
   }
 }
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function storm_layout_builder_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $submits = $form['actions']['submit']['#submit'];
+  $submits[] = 'storm_layout_builder_redirectto_layout';
+  $form['actions']['save_and_manage'] = [
+    '#type' => 'submit',
+    '#value' => t('Save & manage components'),
+    '#button_type' => 'primary',
+    '#weight' => 100,
+    '#submit' => $submits,
+  ];
+}
+
+/**
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function storm_layout_builder_redirectto_layout($form, FormStateInterface $form_state) {
+  $form_state->setRedirect('layout_builder.overrides.node.view', [
+    'node' => $form_state
+      ->getFormObject()
+      ->getEntity()
+      ->id(),
+  ]);
+}
