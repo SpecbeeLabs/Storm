@@ -2,7 +2,6 @@ name: Storm block - Card
 type: module
 description: Provides a card block type with an image, title, text and link.
 package: Storm
-8.x
 core_version_requirement: ^9 || ^10
 dependencies:
   - storm_blocks:storm_blocks

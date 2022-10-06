@@ -2,7 +2,7 @@ name: Storm block - View
 type: module
 description: Provides a block type to reference view listing.
 package: Storm
-8.x
+
 core_version_requirement: ^9 || ^10
 dependencies:
   - storm_blocks:storm_blocks
