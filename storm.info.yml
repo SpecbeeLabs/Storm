@@ -2,7 +2,7 @@ name: "Storm"
 type: profile
 description: "A base profile for Drupal 9 with rich features for faster development and head start."
 version: VERSION
-core_version_requirement: "^8.8 || ^9"
+core_version_requirement: ^9 || ^10
 package: Storm
 install:
   # Core
@@ -48,11 +48,6 @@ install:
   - addtoany:addtoany
   - admin_toolbar:admin_toolbar
   - admin_toolbar_tools:admin_toolbar_tools
-  - advagg:advagg
-  - advagg:advagg_bundler
-  - advagg:advagg_cdn
-  - advagg:advagg_css_minify
-  - advagg:advagg_js_minify
   - auto_entitylabel:auto_entitylabel
   - block_visibility_groups:block_visibility_groups
   - clientside_validation:clientside_validation

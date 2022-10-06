@@ -73,7 +73,9 @@
         "npm-asset/select2": "^4.0",
         "drupal/addtoany": "^1.16",
         "drupal/schema_metatag": "^2.3",
-        "drupal/autosave_form": "^1.4"
+        "drupal/autosave_form": "^1.4",
+        "drupal/quicklink": "^2.0",
+        "drupal/minifyhtml": "^2.0"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23"

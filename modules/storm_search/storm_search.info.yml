@@ -2,7 +2,7 @@ name: Storm search
 type: module
 description: "Provides integration of Drupal and Search API."
 version: VERSION
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^9 || ^10
 package: Storm
 dependencies:
   - search_api:search_api

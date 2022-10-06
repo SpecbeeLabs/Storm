@@ -1,0 +1,14 @@
+name: Storm Perfomance
+type: module
+description: "Provides performance enhancements."
+version: VERSION
+core_version_requirement: ^9 || ^10
+package: Storm
+dependencies:
+  - advagg:advagg
+  - advagg:advagg_bundler
+  - advagg:advagg_cdn
+  - advagg:advagg_css_minify
+  - advagg:advagg_js_minify
+  - minifyhtml:minifyhtml
+  - quicklink:quicklink

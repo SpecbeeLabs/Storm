@@ -2,7 +2,7 @@ name: Storm Article
 type: module
 description: "Provides Article content type."
 version: VERSION
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^9 || ^10
 package: Storm
 dependencies:
   - storm:storm_content_types

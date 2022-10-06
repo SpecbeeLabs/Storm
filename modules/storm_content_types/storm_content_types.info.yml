@@ -2,7 +2,7 @@ name: Storm content type
 type: module
 description: "Provides basic content types with Storm."
 version: VERSION
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^9 || ^10
 package: Storm
 dependencies:
   - autosave_form:autosave_form

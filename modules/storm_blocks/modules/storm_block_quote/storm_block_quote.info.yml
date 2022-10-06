@@ -2,7 +2,7 @@ name: Storm block - Quote
 type: module
 description: Provides a quote block type to place testimonial component.
 package: Storm
-core: 8.x
-core_version_requirement: ^8 || ^9
+8.x
+core_version_requirement: ^9 || ^10
 dependencies:
   - storm_blocks:storm_blocks

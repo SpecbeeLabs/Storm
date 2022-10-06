@@ -1,7 +1,7 @@
 name: 'Storm block - Accordion'
 description: 'Provides an Accordion block type and widget to place in a Layout Builder.'
 type: module
-core_version_requirement: '^8.9 || ^9'
+core_version_requirement: ^9 || ^10
 package: Storm
 dependencies:
   - storm_blocks:storm_blocks
