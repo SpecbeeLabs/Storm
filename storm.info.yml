@@ -81,6 +81,7 @@ install:
   - storm_layout_builder:storm_layout_builder
   - storm_media:storm_media
   - storm_page:storm_page
+  - storm_performance:storm_performance
   - storm_search:storm_search
   - storm_security:storm_security
   - storm_seo:storm_seo
