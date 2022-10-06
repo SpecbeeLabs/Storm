@@ -1,0 +1,8 @@
+config_rewrite: replace
+active: true
+css:
+  max: 4
+  logic: 0
+js:
+  max: 4
+  logic: 0

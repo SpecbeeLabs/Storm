@@ -1,0 +1,3 @@
+config_rewrite: replace
+minifier: 2
+add_license: true

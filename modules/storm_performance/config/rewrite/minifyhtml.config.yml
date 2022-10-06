@@ -1,0 +1,4 @@
+config_rewrite: replace
+strip_comments: true
+minify: true
+exclude_pages: '/admin*'
