@@ -5,6 +5,7 @@ version: VERSION
 core_version_requirement: ^8.8 || ^9
 package: Storm
 dependencies:
+  - autosave_form:autosave_form
   - drupal:link
   - drupal:media
   - drupal:node

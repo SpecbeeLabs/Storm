@@ -15,6 +15,7 @@ dependencies:
   - pathauto:pathauto
   - redirect:redirect
   - robotstxt:robotstxt
+  - schema_metatag:schema_metatag
   - seo_checklist:seo_checklist
   - xmlsitemap:xmlsitemap
   - yoast_seo:yoast_seo

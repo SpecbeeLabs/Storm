@@ -70,7 +70,10 @@
         "drupal/xmlsitemap": "^1.2",
         "drupal/yoast_seo": "^2.0@alpha",
         "npm-asset/jquery-validation": "^1.17",
-        "npm-asset/select2": "^4.0"
+        "npm-asset/select2": "^4.0",
+        "drupal/addtoany": "^1.16",
+        "drupal/schema_metatag": "^2.3",
+        "drupal/autosave_form": "^1.4"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23"

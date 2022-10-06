@@ -45,9 +45,14 @@ install:
   - drupal:views_ui
   - drupal:workflows
   # Contrib
+  - addtoany:addtoany
   - admin_toolbar:admin_toolbar
   - admin_toolbar_tools:admin_toolbar_tools
   - advagg:advagg
+  - advagg:advagg_bundler
+  - advagg:advagg_cdn
+  - advagg:advagg_css_minify
+  - advagg:advagg_js_minify
   - auto_entitylabel:auto_entitylabel
   - block_visibility_groups:block_visibility_groups
   - clientside_validation:clientside_validation
@@ -59,6 +64,7 @@ install:
   - link_attributes:link_attributes
   - linked_field:linked_field
   - linkit:linkit
+  - moderation_dashboard:moderation_dashboard
   - simple_pass_reset:simple_pass_reset
   - token:token
   - twig_tweak:twig_tweak
