@@ -3,6 +3,14 @@
  * Gin Layout builder overrides.
  */
 
+.layout-main-wrapper {
+  z-index: unset !important;
+}
+
+.glb-toolbar--extended.glb-toolbar {
+  z-index: 502;
+}
+
 .layout-builder .glb-button,
 .layout-builder .layout-builder__link--add,
 .layout-builder .layout-builder__link,

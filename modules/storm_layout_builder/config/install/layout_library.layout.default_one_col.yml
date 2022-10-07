@@ -32,6 +32,6 @@ layout:
         spacing_right: none
       section_theme:
         styles:
-          blb-full-width: 0
+          slb-full-width: 0
     components: {  }
     third_party_settings: {  }

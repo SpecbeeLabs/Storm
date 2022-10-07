@@ -3,13 +3,13 @@ layout.base:
   version: VERSION
   css:
     theme:
-      css/layout.css: {}
+      css/layout/layout.css: {}
 
 layout.twocol:
   version: VERSION
   css:
     theme:
-      css/layout-twocol-section.css: {}
+      css/layout/layout-twocol-section.css: {}
   dependencies:
     - storm_layout_builder/layout.base
 
@@ -17,7 +17,7 @@ layout.threecol:
   version: VERSION
   css:
     theme:
-      css/layout-threecol-section.css: {}
+      css/layout/layout-threecol-section.css: {}
   dependencies:
     - storm_layout_builder/layout.base
 
@@ -25,23 +25,24 @@ layout.fourcol:
   version: VERSION
   css:
     theme:
-      css/layout-fourcol-section.css: {}
+      css/layout/layout-fourcol-section.css: {}
   dependencies:
     - storm_layout_builder/layout.base
 
 form:
   css:
     component:
-      css/storm-layout-builder-settings.css: {}
-
-browser:
-  css:
-    theme:
-      css/component-browser.css: {}
+      css/overrides/storm-layout-builder-settings.css: {}
 
 gin_lb:
   js:
     js/gin-lb.js: {}
   css:
     theme:
-      css/gin-lb.css: {}
+      css/overrides/gin-lb.css: {}
+
+browser:
+  css:
+    theme:
+      css/component-browser.css: {}
+
