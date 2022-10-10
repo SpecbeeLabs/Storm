@@ -12,6 +12,8 @@ dependencies:
   - drupal:taxonomy
   - field_group:field_group
   - metatag:metatag
+  - scheduler:scheduler
+  - scheduler_content_moderation_integration:scheduler_content_moderation_integration
   - yoast_seo:yoast_seo
 
 
