@@ -1,3 +1,4 @@
+config_rewrite: replace
 allow_date_only: false
 date_format: 'Y-m-d H:i:s'
 date_letters: djmnFMyY
