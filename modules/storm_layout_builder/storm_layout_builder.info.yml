@@ -16,5 +16,4 @@ dependencies:
   - layout_disable:layout_disable
   - layout_library:layout_library
   - media_library_form_element:media_library_form_element
-  - moderation_dashboard:moderation_dashboard
 
