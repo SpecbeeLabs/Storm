@@ -35,8 +35,6 @@ form:
       css/overrides/storm-layout-builder-settings.css: {}
 
 gin_lb:
-  js:
-    js/gin-lb.js: {}
   css:
     theme:
       css/overrides/gin-lb.css: {}
