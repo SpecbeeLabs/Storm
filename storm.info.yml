@@ -1,6 +1,6 @@
 name: "Storm"
 type: profile
-description: "A base profile for Drupal 9 with rich features for faster development and head start."
+description: "A base profile for Drupal 10 with rich features for faster development and head start."
 version: VERSION
 core_version_requirement: ^9 || ^10
 package: Storm
@@ -11,7 +11,7 @@ install:
   - drupal:block
   - drupal:block_content
   - drupal:breakpoint
-  - drupal:ckeditor
+  - drupal:ckeditor5
   - drupal:config
   - drupal:content_moderation
   - drupal:contextual
@@ -34,7 +34,6 @@ install:
   - drupal:options
   - drupal:page_cache
   - drupal:path
-  - drupal:rdf
   - drupal:shortcut
   - drupal:system
   - drupal:taxonomy
@@ -60,7 +59,6 @@ install:
   - linked_field:linked_field
   - linkit:linkit
   - moderation_dashboard:moderation_dashboard
-  - simple_pass_reset:simple_pass_reset
   - token:token
   - twig_tweak:twig_tweak
   - twig_field_value:twig_field_value

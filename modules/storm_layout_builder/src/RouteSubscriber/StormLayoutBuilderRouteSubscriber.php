@@ -24,7 +24,7 @@ class StormLayoutBuilderRouteSubscriber extends RouteSubscriberBase {
   /**
    * {@inheritdoc}
    */
-  public static function getSubscribedEvents() {
+  public static function getSubscribedEvents(): array {
     $events[RoutingEvents::ALTER] = ['onAlterRoutes', -150];
     return $events;
   }

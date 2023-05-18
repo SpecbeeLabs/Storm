@@ -7,7 +7,6 @@ package: Storm
 dependencies:
   - advagg:advagg
   - advagg:advagg_bundler
-  - advagg:advagg_cdn
   - advagg:advagg_css_minify
   - advagg:advagg_js_minify
   - minifyhtml:minifyhtml
