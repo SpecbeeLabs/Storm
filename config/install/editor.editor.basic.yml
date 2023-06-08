@@ -1,54 +1,40 @@
+uuid: be2de39f-f91d-4bc1-9153-1edb4c0ff5cb
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.basic
   module:
-    - ckeditor
+    - ckeditor5
 format: basic
-editor: ckeditor
+editor: ckeditor5
 settings:
   toolbar:
-    rows:
-      -
-        -
-          name: Formatting
-          items:
-            - Bold
-            - Italic
-        -
-          name: Links
-          items:
-            - DrupalLink
-            - DrupalUnlink
-        -
-          name: Lists
-          items:
-            - BulletedList
-            - NumberedList
-        -
-          name: Media
-          items:
-            - Blockquote
-            - DrupalImage
-        -
-          name: Tools
-          items:
-            - Source
-            - Maximize
+    items:
+      - bold
+      - italic
+      - link
+      - bulletedList
+      - numberedList
+      - blockQuote
+      - drupalInsertImage
+      - sourceEditing
   plugins:
-    drupallink:
+    ckeditor5_imageResize:
+      allow_resize: true
+    ckeditor5_list:
+      reversed: true
+      startIndex: true
+    ckeditor5_sourceEditing:
+      allowed_tags: {  }
+    linkit_extension:
       linkit_enabled: true
       linkit_profile: default
-    language:
-      language_list: un
-    stylescombo:
-      styles: ''
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: null
-    height: null
+    width: 0
+    height: 0

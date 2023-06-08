@@ -110,9 +110,11 @@ function storm_layout_builder_form_node_form_alter(&$form, FormStateInterface $f
     $form['actions']['save_and_manage'] = [
       '#type' => 'submit',
       '#value' => t('Save & manage components'),
+      '#submit' => $submits,
       '#button_type' => 'primary',
       '#weight' => 100,
-      '#submit' => $submits,
+      "#ief_submit_trigger" => true,
+      "#ief_submit_trigger_all" => true,
     ];
   }
 }
