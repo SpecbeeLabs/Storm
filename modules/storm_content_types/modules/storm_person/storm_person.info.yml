@@ -1,0 +1,8 @@
+name: Storm Person
+type: module
+description: "Provides Person content type."
+version: VERSION
+core_version_requirement: ^9 || ^10
+package: Storm
+dependencies:
+  - storm:storm_content_types
