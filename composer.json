@@ -27,6 +27,7 @@
         "drupal/entity_embed": "1.x-dev@dev",
         "drupal/entity_print": "^2.11",
         "drupal/entity_reference_display": "^2.0",
+        "drupal/entity_usage": "^2.0@beta",
         "drupal/facets": "^2.0",
         "drupal/field_group": "^3.4",
         "drupal/filefield_paths": "^1.0@beta",
