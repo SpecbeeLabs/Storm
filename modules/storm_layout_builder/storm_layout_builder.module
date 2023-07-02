@@ -47,7 +47,22 @@ function storm_layout_builder_preprocess_layout(&$variables) {
 
   if ($variables['settings'] && (isset($variables['settings']['section_background']) || isset($variables['settings']['section_padding']) || isset($variables['settings']['section_spacing']) || isset($variables['settings']['section_theme']['styles']))) {
     // Merge all modifier classes.
-    $class = array_merge($class, [$variables['settings']['section_background']['background_color']], $variables['settings']['section_padding'], $variables['settings']['section_spacing'], $variables['settings']['section_theme']['styles']);
+    if (isset($variables['settings']['section_background'])) {
+      $class = array_merge($class, [$variables['settings']['section_background']['background_color']]);
+    }
+
+    if (isset($variables['settings']['section_padding'])) {
+      $class = array_merge($class, [$variables['settings']['section_padding']]);
+    }
+
+    if (isset($variables['settings']['section_spacing'])) {
+      $class = array_merge($class, [$variables['settings']['section_spacing']]);
+    }
+
+    if (isset($variables['settings']['section_theme']['styles'])) {
+      $class = array_merge($class, [$variables['settings']['section_theme']['styles']]);
+    }
+
     // Filter out any none values.
     $class = array_filter($class, fn ($m) => $m != 'none');
   }
@@ -107,12 +122,15 @@ function storm_layout_builder_form_node_form_alter(&$form, FormStateInterface $f
   if ($node->bundle() === 'landing_page') {
     $submits = $form['actions']['submit']['#submit'];
     $submits[] = 'storm_layout_builder_redirectto_layout';
+
     $form['actions']['save_and_manage'] = [
       '#type' => 'submit',
       '#value' => t('Save & manage components'),
+      '#submit' => $submits,
       '#button_type' => 'primary',
       '#weight' => 100,
-      '#submit' => $submits,
+      "#ief_submit_trigger" => true,
+      "#ief_submit_trigger_all" => true,
     ];
   }
 }
