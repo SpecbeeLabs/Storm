@@ -52,6 +52,7 @@ install:
   - clientside_validation:clientside_validation
   - entity_clone:entity_clone
   - entity_embed:entity_embed
+  - entity_usage:entity_usage
   - field_group:field_group
   - filefield_paths:filefield_paths
   - gin_toolbar:gin_toolbar
@@ -79,6 +80,7 @@ install:
   - storm_layout_builder:storm_layout_builder
   - storm_media:storm_media
   - storm_page:storm_page
+  - storm_person:storm_person
   - storm_performance:storm_performance
   - storm_search:storm_search
   - storm_security:storm_security

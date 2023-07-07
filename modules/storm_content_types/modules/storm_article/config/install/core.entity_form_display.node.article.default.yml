@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.article.body
+    - field.field.node.article.field_author
     - field.field.node.article.field_category
     - field.field.node.article.field_featured_image
     - field.field.node.article.field_footer_text
@@ -16,6 +17,7 @@ dependencies:
     - field.field.node.article.field_yoast_seo
     - node.type.article
   module:
+    - content_moderation
     - field_group
     - link
     - media_library
@@ -94,6 +96,16 @@ content:
     weight: 7
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_author:
+    type: entity_reference_autocomplete
+    weight: 101
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_category:
     type: options_select
