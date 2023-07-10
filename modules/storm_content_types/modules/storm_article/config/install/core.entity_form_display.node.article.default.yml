@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.article.field_video
     - field.field.node.article.field_yoast_seo
     - node.type.article
+    - workflows.workflow.editorial
   module:
     - content_moderation
     - field_group
@@ -23,6 +24,7 @@ dependencies:
     - media_library
     - metatag
     - path
+    - scheduler
     - select2
     - text
     - yoast_seo
@@ -35,47 +37,86 @@ third_party_settings:
         - field_video
       label: Media
       region: content
-      parent_name: ''
-      weight: 2
-      format_type: details
+      parent_name: group_content_tabs
+      weight: 5
+      format_type: tab
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
-        open: true
+        formatter: closed
         description: ''
         required_fields: true
+        open: true
     group_content:
       children:
+        - title
+        - field_teaser_text
         - field_shoulder_text
         - body
         - field_footer_text
       label: Content
       region: content
-      parent_name: ''
-      weight: 3
-      format_type: fieldset
+      parent_name: group_content_tabs
+      weight: 4
+      format_type: tab
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
+        formatter: closed
         description: ''
         required_fields: true
     group_tagging:
       children:
+        - field_author
         - field_category
         - field_tags
+        - field_references
       label: Tagging
       region: content
-      parent_name: ''
-      weight: 4
-      format_type: fieldset
+      parent_name: group_content_tabs
+      weight: 6
+      format_type: tab
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
+        formatter: closed
         description: ''
         required_fields: true
+    group_content_tabs:
+      children:
+        - group_content
+        - group_media
+        - group_tagging
+      label: Content
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_realtime_seo:
+      children:
+        - field_yoast_seo
+      label: 'Realtime SEO'
+      region: content
+      parent_name: ''
+      weight: 9
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+        weight: 0
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -83,7 +124,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 6
+    weight: 3
     region: content
     settings:
       rows: 9
@@ -93,13 +134,13 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
   field_author:
     type: entity_reference_autocomplete
-    weight: 101
+    weight: 8
     region: content
     settings:
       match_operator: CONTAINS
@@ -109,7 +150,7 @@ content:
     third_party_settings: {  }
   field_category:
     type: options_select
-    weight: 6
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -122,7 +163,7 @@ content:
     third_party_settings: {  }
   field_footer_text:
     type: text_textarea
-    weight: 7
+    weight: 4
     region: content
     settings:
       rows: 5
@@ -130,7 +171,7 @@ content:
     third_party_settings: {  }
   field_meta_tags:
     type: metatag_firehose
-    weight: 51
+    weight: 7
     region: content
     settings:
       sidebar: true
@@ -138,7 +179,7 @@ content:
     third_party_settings: {  }
   field_references:
     type: link_default
-    weight: 13
+    weight: 11
     region: content
     settings:
       placeholder_url: ''
@@ -146,7 +187,7 @@ content:
     third_party_settings: {  }
   field_shoulder_text:
     type: text_textarea
-    weight: 5
+    weight: 2
     region: content
     settings:
       rows: 5
@@ -154,7 +195,7 @@ content:
     third_party_settings: {  }
   field_tags:
     type: select2_entity_reference
-    weight: 7
+    weight: 10
     region: content
     settings:
       width: 100%
@@ -186,41 +227,44 @@ content:
     third_party_settings: {  }
   field_yoast_seo:
     type: yoast_seo_widget
-    weight: 52
+    weight: 10
     region: content
     settings:
-      edit_title: false
-      edit_description: false
+      body: body
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 10
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 8
+    weight: 2
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
-  status:
-    type: boolean_checkbox
-    weight: 11
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 10
     region: content
-    settings:
-      display_label: true
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 6
+    region: content
+    settings: {  }
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 9
+    weight: 3
     region: content
     settings:
       display_label: true
@@ -233,19 +277,19 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 5
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  url_redirects:
-    weight: 50
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+  url_redirects:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  publish_state: true
+  status: true
+  uid: true
+  unpublish_state: true
