@@ -55,6 +55,7 @@ install:
   - entity_usage:entity_usage
   - field_group:field_group
   - filefield_paths:filefield_paths
+  - gin_login:gin_login
   - gin_toolbar:gin_toolbar
   - link_attributes:link_attributes
   - linked_field:linked_field
