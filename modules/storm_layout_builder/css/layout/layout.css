@@ -3,17 +3,24 @@
  * Base stylesheet for flex-box based grid of layout sections.
  */
 
-.l-container,
+:root {
+  --sp: var(--sp2);
+  --sp2: calc(2 * var(--sp));
+  --sp3: calc(3 * var(--sp));
+  --sp4: calc(4 * var(--sp));
+}
+
+.layout,
 .c-title {
   width: 100%;
 }
 
-.l-grid {
+.layout__region {
   display: flex;
   flex-wrap: wrap;
 }
 
-.l-container--onecol .l-grid {
+.layout--onecol .l-grid {
   display: block;
   width: 100%;
 }
@@ -36,155 +43,155 @@
   text-align: right;
 }
 
-.slb-bg-red {
+.u-bg-red {
   background-color: #eb4d4b !important;
 }
 
-.slb-bg-green {
+.u-bg-green {
   background-color: #6ab04c !important;
 }
 
-.slb-bg-blue {
+.u-bg-blue {
   background-color: #4834d4 !important;
 }
 
-.slb-bg-yellow {
+.u-bg-yellow {
   background-color: #f9ca24 !important;
 }
 
-.slb-bg-white {
+.u-bg-white {
   background-color: #fff !important;
 }
 
-.slb-bg-black {
+.u-bg-black {
   background-color: #1b1b1d !important;
 }
 
-.slb-padding-top-s {
-  padding-top: 8px;
+.u-padding-top-s {
+  padding-top: var(--sp);
 }
 
-.slb-padding-top-m {
-  padding-top: 16px;
+.u-padding-top-m {
+  padding-top: var(--sp2);
 }
 
-.slb-padding-top-l {
-  padding-top: 24px;
+.u-padding-top-l {
+  padding-top: var(--sp3);
 }
 
-.slb-padding-top-xl {
-  padding-top: 32px;
+.u-padding-top-xl {
+  padding-top: var(--sp4);
 }
 
-.slb-padding-bottom-s {
-  padding-bottom: 8px;
+.u-padding-bottom-s {
+  padding-bottom: var(--sp);
 }
 
-.slb-padding-bottom-m {
-  padding-bottom: 16px;
+.u-padding-bottom-m {
+  padding-bottom: var(--sp2);
 }
 
-.slb-padding-bottom-l {
-  padding-bottom: 24px;
+.u-padding-bottom-l {
+  padding-bottom: var(--sp3);
 }
 
-.slb-padding-bottom-xl {
-  padding-bottom: 32px;
+.u-padding-bottom-xl {
+  padding-bottom: var(--sp4);
 }
 
-.slb-padding-left-s {
-  padding-left: 8px;
+.u-padding-left-s {
+  padding-left: var(--sp);
 }
 
-.slb-padding-left-m {
-  padding-left: 16px;
+.u-padding-left-m {
+  padding-left: var(--sp2);
 }
 
-.slb-padding-left-l {
-  padding-left: 24px;
+.u-padding-left-l {
+  padding-left: var(--sp3);
 }
 
-.slb-padding-left-xl {
-  padding-left: 32px;
+.u-padding-left-xl {
+  padding-left: var(--sp4);
 }
 
-.slb-padding-right-s {
-  padding-right: 8px;
+.u-padding-right-s {
+  padding-right: var(--sp);
 }
 
-.slb-padding-right-m {
-  padding-right: 16px;
+.u-padding-right-m {
+  padding-right: var(--sp2);
 }
 
-.slb-padding-right-l {
-  padding-right: 24px;
+.u-padding-right-l {
+  padding-right: var(--sp3);
 }
 
-.slb-padding-right-xl {
-  padding-right: 32px;
+.u-padding-right-xl {
+  padding-right: var(--sp4);
 }
 
-.slb-spacing-top-s {
-  margin-top: 8px;
+.u-spacing-top-s {
+  margin-top: var(--sp);
 }
 
-.slb-spacing-top-m {
-  margin-top: 16px;
+.u-spacing-top-m {
+  margin-top: var(--sp2);
 }
 
-.slb-spacing-top-l {
-  margin-top: 24px;
+.u-spacing-top-l {
+  margin-top: var(--sp3);
 }
 
-.slb-spacing-top-xl {
-  margin-top: 32px;
+.u-spacing-top-xl {
+  margin-top: var(--sp4);
 }
 
-.slb-spacing-bottom-s {
-  margin-bottom: 8px;
+.u-spacing-bottom-s {
+  margin-bottom: var(--sp);
 }
 
-.slb-spacing-bottom-m {
-  margin-bottom: 16px;
+.u-spacing-bottom-m {
+  margin-bottom: var(--sp2);
 }
 
-.slb-spacing-bottom-l {
-  margin-bottom: 24px;
+.u-spacing-bottom-l {
+  margin-bottom: var(--sp3);
 }
 
-.slb-spacing-bottom-xl {
-  margin-bottom: 32px;
+.u-spacing-bottom-xl {
+  margin-bottom: var(--sp4);
 }
 
-.slb-spacing-left-s {
-  margin-left: 8px;
+.u-spacing-left-s {
+  margin-left: var(--sp);
 }
 
-.slb-spacing-left-m {
-  margin-left: 16px;
+.u-spacing-left-m {
+  margin-left: var(--sp2);
 }
 
-.slb-spacing-left-l {
-  margin-left: 24px;
+.u-spacing-left-l {
+  margin-left: var(--sp3);
 }
 
-.slb-spacing-left-xl {
-  margin-left: 32px;
+.u-spacing-left-xl {
+  margin-left: var(--sp4);
 }
 
-.slb-spacing-right-s {
-  margin-right: 8px;
+.u-spacing-right-s {
+  margin-right: var(--sp);
 }
 
-.slb-spacing-right-m {
-  margin-right: 16px;
+.u-spacing-right-m {
+  margin-right: var(--sp2);
 }
 
-.slb-spacing-right-l {
-  margin-right: 24px;
+.u-spacing-right-l {
+  margin-right: var(--sp3);
 }
 
-.slb-spacing-right-xl {
-  margin-right: 32px;
+.u-spacing-right-xl {
+  margin-right: var(--sp4);
 }
 

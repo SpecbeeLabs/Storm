@@ -24,24 +24,24 @@ function storm_layout_builder_preprocess_layout(&$variables) {
   // Build the Layout container class.
   switch ($variables['content']['#layout']->id()) {
     case 'storm_layout_onecol':
-      $layout_modifier = 'l-container--onecol';
+      $layout_modifier = 'layout--onecol';
       break;
 
     case 'storm_layout_twocol_section':
-      $layout_modifier = 'l-container--twocol';
+      $layout_modifier = 'layout--twocol';
       break;
 
     case 'storm_layout_threecol_section':
-      $layout_modifier = 'l-container--threecol';
+      $layout_modifier = 'layout--threecol';
       break;
 
     case 'storm_layout_fourcol_section':
-      $layout_modifier = 'l-container--fourcol';
+      $layout_modifier = 'layout--fourcol';
       break;
   }
 
   $class = [
-    'l-container',
+    'layout',
     $layout_modifier ?? NULL,
   ];
 
@@ -75,10 +75,10 @@ function storm_layout_builder_preprocess_layout(&$variables) {
     }
   }
 
-  $variables['layout_container']['attributes'] = new Attribute([
-    'class' => $class,
-    'style' => $background_media ?? NULL,
-  ]);
+  $variables['attributes']['class'] = $class;
+  if (!empty($background_media)) {
+    $variables['attributes']['style'] = $background_media;
+  }
 }
 
 /**

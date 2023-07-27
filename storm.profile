@@ -38,19 +38,3 @@ function storm_set_default_theme() {
       ->save(TRUE);
   }
 }
-
-/**
- * Implements hook_page_attachments().
- *
- * @param array $attachments
- */
-function storm_page_attachments(array &$attachments) {
-  // Override the Gin variables globally.
-  $attachments['#attached']['library'][] = 'storm/global';
-
-  // Overrides for admin theme.
-  $current_theme = \Drupal::theme()->getActiveTheme()->getName();
-  if ($current_theme === 'gin') {
-    $attachments['#attached']['library'][] = 'storm/overrides';
-  }
-}

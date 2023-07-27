@@ -16,14 +16,14 @@
 {% set heading_style = content['#settings']['section_title']['heading_style'] %}
 
 {% if content.content %}
-  <div{{layout_container.attributes}}>
+  <div{{attributes}}>
     {% if title %}
       <{{heading_style}} class="c-title c-title--{{ content['#settings']['section_title']['heading_alignment'] }}">
         {{ title }}
       </{{heading_style}}>
     {% endif %}
-    <div {{ region_attributes.content.addClass('l-grid', 'l-grid--content') }}>
-      {{ content.content }}
-    </div>
+      <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
+        {{ content.content }}
+      </div>
   </div>
 {% endif %}

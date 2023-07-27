@@ -16,7 +16,7 @@
 {% set heading_style = content['#settings']['section_title']['heading_style'] %}
 
 {% if content.first or content.second or content.third %}
-  <div{{layout_container.attributes}}>
+  <div{{attributes}}>
     {% if title %}
       <{{heading_style}} class="c-title c-title--{{ content['#settings']['section_title']['heading_alignment'] }}">
         {{ title }}
@@ -24,19 +24,19 @@
     {% endif %}
     <div{{attributes.addClass(classes)}}>
       {% if content.first %}
-        <div {{ region_attributes.first.addClass('l-grid__item', 'l-grid__item--first') }}>
+        <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first') }}>
           {{ content.first }}
         </div>
       {% endif %}
 
       {% if content.second %}
-        <div {{ region_attributes.second.addClass('l-grid__item', 'l-grid__item--second') }}>
+        <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second') }}>
           {{ content.second }}
         </div>
       {% endif %}
 
       {% if content.third %}
-        <div {{ region_attributes.third.addClass('l-grid__item', 'l-grid__item--third') }}>
+        <div {{ region_attributes.third.addClass('layout__region', 'layout__region--third') }}>
           {{ content.third }}
         </div>
       {% endif %}

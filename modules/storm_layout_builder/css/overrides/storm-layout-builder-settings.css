@@ -31,3 +31,7 @@
   width: 100%;
   height: 100%;
 }
+
+.media-library-form-element.glb-form-wrapper {
+  padding: 20px;
+}

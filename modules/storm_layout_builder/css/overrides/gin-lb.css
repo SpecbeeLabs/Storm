@@ -11,14 +11,6 @@
   z-index: 502;
 }
 
-.layout-builder .glb-button,
-.layout-builder .layout-builder__link--add,
-.layout-builder .layout-builder__link,
-.paragraphs-actions .paragraphs-icon-button,
-.paragraphs-dropdown-actions .paragraphs-dropdown-action {
-  border-radius: 0 !important;
-}
-
 .paragraphs-actions .paragraphs-icon-button {
   padding: 0.25rem 0.75rem !important;
   font-size: 0.8rem !important;
