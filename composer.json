@@ -166,13 +166,23 @@
                 "2983237 - Add IEF and entity_browser module support": "https://www.drupal.org/files/issues/2022-08-09/block_field-2983237-11.patch"
             },
             "drupal/core": {
-                "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch"
+                "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch",
+                "3241295 - CKEditor 5 isn't respecting field widgets row settings": "https://www.drupal.org/files/issues/2023-02-02/3241295-d9.5-101.patch",
+                "Order image mappings by breakpoint ID and numeric multiplier": "https://www.drupal.org/files/issues/2022-05-19/3267870-9.5.x-47.patch",
+                "Apply width and height attributes to responsive image tag": "https://www.drupal.org/files/issues/2022-09-30/3192234-228-9.5.x.patch"
             },
             "drupal/elasticsearch_connector": {
                 "2850749 - Cannot load the Elasticsearch cluster for your index": "https://www.drupal.org/files/issues/2021-12-01/cannot-load-cluster-exception-2850749-10.patch"
             },
+            "drupal/gin_lb": {
+                "3359032 - Error: Call to a member function addClass() on array": "https://www.drupal.org/files/issues/2023-05-09/3359032.patch"
+            },
             "drupal/layout_builder_modal": {
-                "3196147 - Move block description into modal title": "https://www.drupal.org/files/issues/2021-04-06/block-title-in-modal-title-3196147-9.patch"
+                "3196147 - Move block description into modal title": "https://www.drupal.org/files/issues/2021-04-06/block-title-in-modal-title-3196147-9.patch",
+                "3214458 - Move all Layout Builder operations into modal": "https://www.drupal.org/files/issues/2022-11-29/issue-3214458-move-all-layout-5.patch"
+            },
+            "drupal/paragraphs": {
+                "3090200 - Paragraphs do not render: access check for 'view' fail when using layout builder + custom blocks & content revisions because the incorrect parent revision ID is being passed in ParagraphAccessControlHandler::checkAccess()": "https://www.drupal.org/files/issues/2023-01-31/3084934-13_combine_3090200-22-update_0.patch"
             }
         }
     }
