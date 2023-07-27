@@ -4,7 +4,7 @@
  */
 
 :root {
-  --sp: var(--sp2);
+  --sp: 36px;
   --sp2: calc(2 * var(--sp));
   --sp3: calc(3 * var(--sp));
   --sp4: calc(4 * var(--sp));

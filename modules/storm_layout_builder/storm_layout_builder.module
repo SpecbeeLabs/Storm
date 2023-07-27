@@ -6,7 +6,6 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Template\Attribute;
 use Drupal\file\Entity\File;
 use Drupal\media\Entity\Media;
 
@@ -45,9 +44,18 @@ function storm_layout_builder_preprocess_layout(&$variables) {
     $layout_modifier ?? NULL,
   ];
 
-  if ($variables['settings'] && (isset($variables['settings']['section_background']) || isset($variables['settings']['section_padding']) || isset($variables['settings']['section_spacing']) || isset($variables['settings']['section_theme']['styles']))) {
+  if ($variables['settings'] && (
+      isset($variables['settings']['section_background']) ||
+      isset($variables['settings']['section_padding']) ||
+      isset($variables['settings']['section_spacing']) ||
+      isset($variables['settings']['section_theme']['styles']))) {
     // Merge all modifier classes.
-    $class = array_merge($class, [$variables['settings']['section_background']['background_color']], $variables['settings']['section_padding'], $variables['settings']['section_spacing'], $variables['settings']['section_theme']['styles']);
+    $class = array_merge($class,
+      [$variables['settings']['section_background']['background_color']],
+      $variables['settings']['section_padding'],
+      $variables['settings']['section_spacing'],
+      $variables['settings']['section_theme']['styles']
+    );
     // Filter out any none values.
     $class = array_filter($class, fn ($m) => $m != 'none');
   }
@@ -113,8 +121,8 @@ function storm_layout_builder_form_node_form_alter(&$form, FormStateInterface $f
       '#submit' => $submits,
       '#button_type' => 'primary',
       '#weight' => 100,
-      "#ief_submit_trigger" => true,
-      "#ief_submit_trigger_all" => true,
+      "#ief_submit_trigger" => TRUE,
+      "#ief_submit_trigger_all" => TRUE,
     ];
   }
 }
