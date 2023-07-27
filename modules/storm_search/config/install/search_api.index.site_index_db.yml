@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - search_api.server.storm_search_db
+    - core.entity_view_mode.node.full
   module:
     - node
     - search_api
@@ -11,6 +12,17 @@ name: 'Site index'
 description: 'A global index to index all nodes to the DB search server.'
 read_only: false
 field_settings:
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        - anonymous
+      view_mode:
+        'entity:node':
+          article: full
+          person: full
   title:
     label: Title
     datasource_id: 'entity:node'

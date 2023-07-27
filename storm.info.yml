@@ -50,9 +50,11 @@ install:
   - auto_entitylabel:auto_entitylabel
   - block_visibility_groups:block_visibility_groups
   - clientside_validation:clientside_validation
+  - diff:diff
   - entity_clone:entity_clone
   - entity_embed:entity_embed
   - entity_usage:entity_usage
+  - easy_breadcrumb:easy_breadcrumb
   - field_group:field_group
   - filefield_paths:filefield_paths
   - gin_login:gin_login
