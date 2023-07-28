@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: image_card
+block_id: 'inline_block:image_card'
+category: component
+label: 'Image Card'
+image_path: /profiles/contrib/storm/modules/storm_layout_builder/assets/default.png
+image_alt: ''
+weight: -100

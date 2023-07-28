@@ -1,0 +1,7 @@
+name: 'Storm block - Image Card'
+description: 'Provides an Image Card block type.'
+type: module
+package: Storm
+core_version_requirement: ^9 || ^10
+dependencies:
+  - storm_blocks:storm_blocks

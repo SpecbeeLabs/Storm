@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: promo_card
+label: 'Promo Card'
+revision: 0
+description: 'Display a Full length card with image alignment options.'

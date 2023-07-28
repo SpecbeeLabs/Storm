@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.promo_card
+    - field.storage.block_content.field_image_alignment
+  module:
+    - options
+id: block_content.promo_card.field_image_alignment
+field_name: field_image_alignment
+entity_type: block_content
+bundle: promo_card
+label: 'Image Alignment'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

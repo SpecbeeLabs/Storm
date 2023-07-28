@@ -62,6 +62,7 @@ install:
   - link_attributes:link_attributes
   - linked_field:linked_field
   - linkit:linkit
+  - responsive_preview:responsive_preview
   - token:token
   - twig_tweak:twig_tweak
   - twig_field_value:twig_field_value
@@ -74,6 +75,8 @@ install:
   - storm_blocks:storm_block_content_ref
   - storm_blocks:storm_block_cta_button
   - storm_blocks:storm_block_hero_banner
+  - storm_blocks:storm_block_image_card
+  - storm_blocks:storm_block_promo_card
   - storm_blocks:storm_block_media
   - storm_blocks:storm_block_text
   - storm_blocks:storm_block_view
