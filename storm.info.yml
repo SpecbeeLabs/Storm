@@ -62,7 +62,6 @@ install:
   - link_attributes:link_attributes
   - linked_field:linked_field
   - linkit:linkit
-  - social_link_field:social_link_field
   - token:token
   - twig_tweak:twig_tweak
   - twig_field_value:twig_field_value
