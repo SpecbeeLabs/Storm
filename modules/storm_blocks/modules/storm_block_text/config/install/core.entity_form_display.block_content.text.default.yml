@@ -4,7 +4,6 @@ dependencies:
   config:
     - block_content.type.text
     - field.field.block_content.text.body
-    - field.field.block_content.text.field_link
     - field.field.block_content.text.field_title
   module:
     - link
@@ -23,14 +22,6 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
-    third_party_settings: {  }
-  field_link:
-    type: link_default
-    weight: 3
-    region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
     third_party_settings: {  }
   field_title:
     type: string_textfield

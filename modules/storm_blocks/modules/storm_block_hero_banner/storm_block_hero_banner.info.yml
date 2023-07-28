@@ -1,0 +1,7 @@
+name: Storm block - Hero Banner
+type: module
+description: Provides a Hero Banner block type.
+package: Storm
+core_version_requirement: ^9 || ^10
+dependencies:
+  - storm_blocks:storm_blocks

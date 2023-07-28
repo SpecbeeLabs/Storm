@@ -4,7 +4,6 @@ dependencies:
   config:
     - block_content.type.text
     - field.field.block_content.text.body
-    - field.field.block_content.text.field_link
     - field.field.block_content.text.field_title
   module:
     - link
@@ -20,18 +19,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
-    region: content
-  field_link:
-    type: link
-    label: visually_hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 2
     region: content
   field_title:
     type: string

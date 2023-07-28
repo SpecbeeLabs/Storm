@@ -2,21 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.text
-    - field.storage.block_content.field_link
+    - block_content.type.hero_banner
+    - field.storage.block_content.field_secondary_link
   module:
     - link
-id: block_content.text.field_link
-field_name: field_link
+id: block_content.hero_banner.field_secondary_link
+field_name: field_secondary_link
 entity_type: block_content
-bundle: text
-label: Link
+bundle: hero_banner
+label: 'Secondary CTA Link'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  title: 1
+  title: 2
   link_type: 17
 field_type: link
