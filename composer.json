@@ -83,7 +83,8 @@
         "drupal/xmlsitemap": "^1.4",
         "drupal/yoast_seo": "^1.8",
         "npm-asset/jquery-validation": "^1.17",
-        "npm-asset/select2": "^4.0"
+        "npm-asset/select2": "^4.0",
+        "drupal/social_link_field": "^1.0@dev"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23"

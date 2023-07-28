@@ -6,3 +6,4 @@ core_version_requirement: ^9 || ^10
 package: Storm
 dependencies:
   - storm:storm_content_types
+  - social_link_field:social_link_field
