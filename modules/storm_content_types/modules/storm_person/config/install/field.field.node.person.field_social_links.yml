@@ -5,7 +5,7 @@ dependencies:
     - field.storage.node.field_social_links
     - node.type.person
   module:
-    - link
+    - social_link_field
 id: node.person.field_social_links
 field_name: field_social_links
 entity_type: node
@@ -14,9 +14,44 @@ label: 'Social Links'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    actions: {  }
+    link: ''
+    social: drupal
+  -
+    actions: {  }
+    link: ''
+    social: facebook
+  -
+    actions: {  }
+    link: ''
+    social: linkedin
+  -
+    actions: {  }
+    link: ''
+    social: twitter
 default_value_callback: ''
 settings:
-  title: 2
-  link_type: 16
-field_type: link
+  platforms:
+    drupal: drupal
+    facebook: facebook
+    linkedin: linkedin
+    twitter: twitter
+    behance: 0
+    bitbucket: 0
+    drupalpage: 0
+    email: 0
+    facebookevent: 0
+    github: 0
+    googleplus: 0
+    homepage: 0
+    instagram: 0
+    pinterest: 0
+    spotifyalbum: 0
+    spotifyartist: 0
+    spotifyplaylist: 0
+    tiktok: 0
+    vimeo: 0
+    youtube: 0
+field_type: social_links

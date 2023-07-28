@@ -3,19 +3,103 @@ status: true
 dependencies:
   config:
     - field.field.node.person.body
+    - field.field.node.person.field_designation
     - field.field.node.person.field_meta_tags
     - field.field.node.person.field_photo
+    - field.field.node.person.field_short_bio
     - field.field.node.person.field_social_links
     - field.field.node.person.field_yoast_seo
     - node.type.person
   module:
-    - content_moderation
-    - link
+    - field_group
     - media_library
     - metatag
     - path
+    - social_link_field
     - text
     - yoast_seo
+third_party_settings:
+  field_group:
+    group_realtime_seo:
+      children:
+        - field_yoast_seo
+      label: 'Realtime SEO'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+        weight: 0
+    group_content:
+      children:
+        - group_basic_info
+        - group_bio
+        - group_social_links
+      label: Content
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_basic_info:
+      children:
+        - title
+        - field_designation
+        - field_photo
+      label: 'Basic Info'
+      region: content
+      parent_name: group_content
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_bio:
+      children:
+        - field_short_bio
+        - body
+      label: Bio
+      region: content
+      parent_name: group_content
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_social_links:
+      children:
+        - field_social_links
+      label: 'Social Links'
+      region: content
+      parent_name: group_content
+      weight: 22
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
 id: node.person.default
 targetEntityType: node
 bundle: person
@@ -23,7 +107,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 9
+    weight: 4
     region: content
     settings:
       rows: 9
@@ -33,13 +117,21 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_designation:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_meta_tags:
     type: metatag_firehose
-    weight: 12
+    weight: 2
     region: content
     settings:
       sidebar: true
@@ -47,84 +139,72 @@ content:
     third_party_settings: {  }
   field_photo:
     type: media_library_widget
-    weight: 10
+    weight: 3
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-  field_social_links:
-    type: link_default
-    weight: 11
+  field_short_bio:
+    type: string_textarea
+    weight: 3
     region: content
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_social_links:
+    type: social_links
+    weight: 8
+    region: content
+    settings:
+      select_social: false
+      disable_weight: false
     third_party_settings: {  }
   field_yoast_seo:
     type: yoast_seo_widget
-    weight: 13
+    weight: 15
     region: content
     settings:
       body: body
     third_party_settings: {  }
-  moderation_state:
-    type: moderation_state_default
-    weight: 7
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   path:
     type: path
-    weight: 5
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 3
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 8
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    weight: 4
+    weight: 3
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
     weight: 1
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  moderation_state: true
   publish_on: true
   publish_state: true
+  sticky: true
+  uid: true
   unpublish_on: true
   unpublish_state: true

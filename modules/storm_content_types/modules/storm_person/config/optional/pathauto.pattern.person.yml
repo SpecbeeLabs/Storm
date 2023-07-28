@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: person
+label: Person
+type: 'canonical_entities:node'
+pattern: '/about/[node:title]'
+selection_criteria:
+  0587f199-fdba-4e43-8359-63af7c224906:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 0587f199-fdba-4e43-8359-63af7c224906
+    context_mapping:
+      node: node
+    bundles:
+      person: person
+selection_logic: and
+weight: -5
+relationships: {  }

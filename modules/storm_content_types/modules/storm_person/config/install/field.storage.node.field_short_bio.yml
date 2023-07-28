@@ -3,15 +3,15 @@ status: true
 dependencies:
   module:
     - node
-    - social_link_field
-id: node.field_social_links
-field_name: field_social_links
+id: node.field_short_bio
+field_name: field_short_bio
 entity_type: node
-type: social_links
-settings: {  }
-module: social_link_field
+type: string_long
+settings:
+  case_sensitive: false
+module: core
 locked: false
-cardinality: 4
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
