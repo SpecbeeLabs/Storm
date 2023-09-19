@@ -84,7 +84,7 @@
         "drupal/yoast_seo": "^1.8",
         "npm-asset/jquery-validation": "^1.17",
         "npm-asset/select2": "^4.0",
-        "drupal/social_link_field": "^1.0",
+        "drupal/social_link_field": "^2.0",
         "drupal/responsive_preview": "^2.1"
     },
     "require-dev": {
