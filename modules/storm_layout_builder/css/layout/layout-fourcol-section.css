@@ -4,8 +4,8 @@
  */
 
 @media screen and (min-width: 40em) {
-  .l-container--fourcol .l-grid > .layout__region {
-    flex: 0 1 calc(25% - 0.5em);
+  .layout--four-column .layout__region {
+    flex: 0 1 25%;
   }
 }
 

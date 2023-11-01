@@ -67,8 +67,8 @@ class StormThreeColLayout extends StormLayout {
   public function build(array $regions) {
     $build = parent::build($regions);
     $build['#attributes']['class'] = [
-      'l-grid',
-      'l-grid--' . $this->configuration['column_widths']['options'],
+      'layout--three-column',
+      'layout--three-column--' . $this->configuration['column_widths']['options'],
     ];
     return $build;
   }

@@ -26,21 +26,12 @@ function storm_layout_builder_preprocess_layout(&$variables) {
       $layout_modifier = 'layout--onecol';
       break;
 
-    case 'storm_layout_twocol_section':
-      $layout_modifier = 'layout--twocol';
-      break;
-
-    case 'storm_layout_threecol_section':
-      $layout_modifier = 'layout--threecol';
-      break;
-
     case 'storm_layout_fourcol_section':
       $layout_modifier = 'layout--fourcol';
       break;
   }
 
-  $class = [
-    'layout',
+  $class = $variables['attributes']['class'] + [
     $layout_modifier ?? NULL,
   ];
 
@@ -56,6 +47,7 @@ function storm_layout_builder_preprocess_layout(&$variables) {
       $variables['settings']['section_spacing'],
       $variables['settings']['section_theme']['styles']
     );
+
     // Filter out any none values.
     $class = array_filter($class, fn ($m) => $m != 'none');
   }
@@ -82,10 +74,11 @@ function storm_layout_builder_preprocess_layout(&$variables) {
 
     }
   }
+  dump($variables);
 
   $variables['attributes']['class'] = $class;
   if (!empty($background_media)) {
-    $variables['attributes']['style'] = $background_media;
+    $variables['#attributes']['style'] = $background_media;
   }
 }
 

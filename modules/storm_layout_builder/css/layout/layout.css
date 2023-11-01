@@ -15,20 +15,13 @@
   width: 100%;
 }
 
-.layout__region {
+.layout__area {
   display: flex;
   flex-wrap: wrap;
 }
 
-.layout--onecol .l-grid {
-  display: block;
-  width: 100%;
-}
-
-@media screen and (min-width: 40em) {
-  .l-grid__item {
-    flex: 0 1 100%;
-  }
+.layout-builder__add-block {
+  margin: auto;
 }
 
 .c-title--text-align-center {

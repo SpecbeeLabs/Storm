@@ -22,8 +22,10 @@
         {{ title }}
       </{{heading_style}}>
     {% endif %}
+    <div class="layout__area">
       <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
         {{ content.content }}
       </div>
+    </div>
   </div>
 {% endif %}
