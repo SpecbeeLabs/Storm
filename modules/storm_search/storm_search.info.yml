@@ -4,9 +4,3 @@ description: "Provides integration of Drupal and Search API."
 version: VERSION
 core_version_requirement: ^9 || ^10
 package: Storm
-dependencies:
-  - search_api:search_api
-  - search_api:search_api_db
-  - search_api_block:search_api_block
-  - search_api_page:search_api_page
-  - facets:facets
