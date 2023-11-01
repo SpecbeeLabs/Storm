@@ -7,4 +7,3 @@ package: Storm
 dependencies:
   - storm:storm_content_types
   - storm:storm_person
-  - select2:select2

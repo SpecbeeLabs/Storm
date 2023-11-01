@@ -4,10 +4,3 @@ description: "Provides Media bundles and enhancements."
 version: VERSION
 core_version_requirement: ^9 || ^10
 package: Storm
-dependencies:
-  - drupal:media
-  - drupal:media_library
-  - drupal:responsive_image
-  - focal_point:focal_point
-  - lazy:lazy
-  - webp:webp

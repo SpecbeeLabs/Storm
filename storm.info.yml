@@ -28,12 +28,15 @@ install:
   - drupal:image
   - drupal:inline_form_errors
   - drupal:link
+  - drupal:media
+  - drupal:media_library
   - drupal:menu_link_content
   - drupal:menu_ui
   - drupal:node
   - drupal:options
   - drupal:page_cache
   - drupal:path
+  - drupal:responsive_image
   - drupal:shortcut
   - drupal:system
   - drupal:taxonomy
@@ -47,6 +50,12 @@ install:
   - addtoany:addtoany
   - admin_toolbar:admin_toolbar
   - admin_toolbar_tools:admin_toolbar_tools
+  - advagg:advagg
+  - advagg:advagg_bundler
+  - advagg:advagg_css_minify
+  - advagg:advagg_js_minify
+  - auto_entitylabel:auto_entitylabel
+  - autosave_form:autosave_form
   - auto_entitylabel:auto_entitylabel
   - block_visibility_groups:block_visibility_groups
   - clientside_validation:clientside_validation
@@ -55,17 +64,58 @@ install:
   - entity_embed:entity_embed
   - entity_usage:entity_usage
   - easy_breadcrumb:easy_breadcrumb
+  - facets:facets
   - field_group:field_group
   - filefield_paths:filefield_paths
+  - flood_control:flood_control
+  - focal_point:focal_point
   - gin_login:gin_login
   - gin_toolbar:gin_toolbar
+  - google_analytics:google_analytics
+  - inline_block_title_automatic:inline_block_title_automatic
+  - lazy:lazy
+  - linkchecker:linkchecker
   - link_attributes:link_attributes
   - linked_field:linked_field
   - linkit:linkit
+  - metatag:metatag
+  - metatag:metatag_facebook
+  - metatag:metatag_open_graph
+  - metatag:metatag_twitter_cards
+  - metatag:metatag_views
+  - minifyhtml:minifyhtml
+  - password_policy:password_policy
+  - pathauto:pathauto
+  - quicklink:quicklink
+  - recaptcha:recaptcha
+  - redirect:redirect
   - responsive_preview:responsive_preview
+  - robotstxt:robotstxt
+  - scheduler:scheduler
+  - scheduler_content_moderation_integration:scheduler_content_moderation_integration
+  - schema_metatag:schema_metatag
+  - seckit:seckit
+  - search_api:search_api
+  - search_api:search_api_db
+  - search_api_block:search_api_block
+  - search_api_page:search_api_page
+  - select2:select2
+  - social_link_field:social_link_field
   - token:token
   - twig_tweak:twig_tweak
   - twig_field_value:twig_field_value
+  - username_enumeration_prevention:username_enumeration_prevention
+  - webform:webform_clientside_validation
+  - webform:webform_entity_print
+  - webform:webform_image_select
+  - webform:webform_shortcuts
+  - webform:webform_submission_export_import
+  - webform:webform_submission_log
+  - webform:webform_ui
+  - webform_views:webform_views
+  - webp:webp
+  - xmlsitemap:xmlsitemap
+  - yoast_seo:yoast_seo
   # Storm
   - storm_article:storm_article
   - storm_blocks:storm_blocks

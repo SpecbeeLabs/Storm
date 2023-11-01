@@ -4,16 +4,3 @@ description: "Provides basic content types with Storm."
 version: VERSION
 core_version_requirement: ^9 || ^10
 package: Storm
-dependencies:
-  - autosave_form:autosave_form
-  - drupal:link
-  - drupal:media
-  - drupal:node
-  - drupal:taxonomy
-  - field_group:field_group
-  - metatag:metatag
-  - scheduler:scheduler
-  - scheduler_content_moderation_integration:scheduler_content_moderation_integration
-  - yoast_seo:yoast_seo
-
-

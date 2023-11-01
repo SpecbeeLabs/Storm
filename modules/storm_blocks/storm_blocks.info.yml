@@ -5,7 +5,3 @@ package: Storm
 core_version_requirement: ^9 || ^10
 dependencies:
   - storm:storm_media
-  - drupal:block_content
-  - drupal:link
-  - auto_entitylabel:auto_entitylabel
-  - inline_block_title_automatic:inline_block_title_automatic
