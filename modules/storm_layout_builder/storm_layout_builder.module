@@ -74,7 +74,6 @@ function storm_layout_builder_preprocess_layout(&$variables) {
 
     }
   }
-  dump($variables);
 
   $variables['attributes']['class'] = $class;
   if (!empty($background_media)) {
