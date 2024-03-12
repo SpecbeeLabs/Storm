@@ -172,9 +172,6 @@
             "drupal/elasticsearch_connector": {
                 "2850749 - Cannot load the Elasticsearch cluster for your index": "https://www.drupal.org/files/issues/2021-12-01/cannot-load-cluster-exception-2850749-10.patch"
             },
-            "drupal/gin_lb": {
-                "3359032 - Error: Call to a member function addClass() on array": "https://www.drupal.org/files/issues/2023-05-09/3359032.patch"
-            },
             "drupal/layout_builder_modal": {
                 "3196147 - Move block description into modal title": "https://www.drupal.org/files/issues/2021-04-06/block-title-in-modal-title-3196147-9.patch",
                 "3214458 - Move all Layout Builder operations into modal": "https://www.drupal.org/files/issues/2022-11-29/issue-3214458-move-all-layout-5.patch"
