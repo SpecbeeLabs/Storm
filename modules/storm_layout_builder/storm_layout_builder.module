@@ -93,7 +93,8 @@ function storm_layout_builder_form_layout_builder_browser_block_add_form_alter(&
  * Implements hook_page_attachments().
  */
 function storm_layout_builder_page_attachments(array &$attachments) {
-  if (gin_lb_is_layout_builder_route()) {
+  $route_match = \Drupal::routeMatch();
+  if (array_key_exists('_layout_builder', $route_match->getRouteObject()->getOptions())) {
     $attachments['#attached']['library'][] = 'storm_layout_builder/gin_lb';
   }
 }
